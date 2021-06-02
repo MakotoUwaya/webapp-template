@@ -58,7 +58,7 @@
     "react-app-polyfill": "2.0.0",
     "react-scripts": "4.0.3",
     "react-svg-loader": "3.0.3",
-    "snowpack": "3.5.2",
+    "snowpack": "3.5.4",
     "typescript": "4.3.2"
   },
   "dependencies": {
