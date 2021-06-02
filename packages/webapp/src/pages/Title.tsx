@@ -1,0 +1,69 @@
+import { Box, Button, Container, Grid, Typography } from "@material-ui/core";
+import React, { VFC } from 'react';
+import { Link } from 'react-router-dom';
+
+const Title: VFC = () => {
+  return (
+    <Box
+      css={{
+        bgcolor: 'background.default',
+        display: 'flex',
+        flexDirection: 'column',
+        height: '100%',
+        paddingTop: '100px',
+        justifyContent: 'start'
+      }}
+    >
+      <Container maxWidth="md">
+        <Typography variant="h1" align="center" gutterBottom={true}>
+          Material-UI
+          </Typography>
+        <Typography variant="subtitle1" align="center" gutterBottom={true}>
+          example project
+          </Typography>
+        <Box css={{ textAlign: 'center', marginTop: 50 }}>
+          <Grid
+            container
+            spacing={3}
+
+          >
+            <Grid
+              item
+              xs={12}
+              md={6}
+            >
+              <Button
+                color="primary"
+                component={Link}
+                fullWidth
+                size="large"
+                to="/btn"
+                variant="contained"
+              >
+                Dialog Button
+                </Button>
+            </Grid>
+            <Grid
+              item
+              xs={12}
+              md={6}
+            >
+              <Button
+                color="primary"
+                component={Link}
+                fullWidth
+                size="large"
+                to="/comp"
+                variant="contained"
+              >
+                Sample Component
+                </Button>
+            </Grid>
+          </Grid>
+        </Box>
+      </Container>
+    </Box>
+  );
+}
+
+export default Title;

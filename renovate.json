@@ -1,0 +1,31 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  "labels": [
+    "renovate"
+  ],
+  "dependencyDashboard": true,
+  "rebaseWhen": "never",
+  "timezone": "Asia/Tokyo",
+  "separateMinorPatch": true,
+  "packageRules": [
+    {
+      "automerge": true,
+      "rebaseWhen": "auto",
+      "labels": [
+        "renovate",
+        "automerge"
+      ],
+      "packagePatterns": [
+        "^@types/"
+      ],
+      "major": {
+        "automerge": false
+      },
+      "minor": {
+        "automerge": false
+      }
+    }
+  ]
+}
