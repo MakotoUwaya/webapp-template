@@ -1,4 +1,4 @@
-/** @type {import("snowpack").SnowpackUserConfig } */
+/** @type {import('snowpack').SnowpackUserConfig } */
 export default {
   mount: {
     public: { url: '/', static: true },
@@ -10,7 +10,7 @@ export default {
   ],
   plugins: [
     [
-      "@snowpack/plugin-webpack",
+      '@snowpack/plugin-webpack',
       {
         sourceMap: true,
         minifyJS: true
@@ -21,9 +21,9 @@ export default {
   ],
   routes: [
     {
-      "match": "routes",
-      "src": ".*",
-      "dest": "/index.html"
+      'match': 'routes',
+      'src': '.*',
+      'dest': '/index.html'
     },
   ],
   optimize: {
