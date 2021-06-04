@@ -8,11 +8,11 @@ const Title: VFC = () => {
       css={{
         bgcolor: 'background.default',
         display: 'flex',
-        flexDirection: 'column',
         height: '100%',
         paddingTop: '100px',
         justifyContent: 'start'
       }}
+      flexDirection="column"
     >
       <Container maxWidth="md">
         <Typography variant="h1" align="center" gutterBottom={true}>
@@ -21,7 +21,7 @@ const Title: VFC = () => {
         <Typography variant="subtitle1" align="center" gutterBottom={true}>
           example project
           </Typography>
-        <Box css={{ textAlign: 'center', marginTop: 50 }}>
+        <Box css={{ marginTop: 50 }} textAlign="center">
           <Grid
             container
             spacing={3}

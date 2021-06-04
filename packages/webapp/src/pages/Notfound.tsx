@@ -13,10 +13,10 @@ const Notfound: VFC = () => {
       css={{
         bgcolor: 'background.default',
         display: 'flex',
-        flexDirection: 'column',
         height: '100%',
         justifyContent: 'center'
       }}
+      flexDirection="column"
     >
       <Container maxWidth="md">
         <Typography
@@ -34,7 +34,7 @@ const Notfound: VFC = () => {
           You either tried some shady route or you came here by mistake.
           Whichever it is, try using the navigation
           </Typography>
-        <Box css={{ textAlign: 'center' }}>
+        <Box textAlign="center">
           <img
             alt="Under development"
             src="/images/undraw_page_not_found_su7k.svg"
@@ -46,7 +46,7 @@ const Notfound: VFC = () => {
             }}
           />
         </Box>
-        <Box css={{ textAlign: 'center', marginTop: 50 }}>
+        <Box css={{ marginTop: 50 }} textAlign="center">
           <Button
             component={Link}
             variant="outlined"

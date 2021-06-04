@@ -18,21 +18,21 @@ const ComponentsSample: VFC = () => {
       css={{
         bgcolor: 'background.default',
         display: 'flex',
-        flexDirection: 'column',
         height: '100%',
         marginTop: '100px',
         justifyContent: 'start'
       }}
+      flexDirection="column"
     >
       <Container maxWidth="md">
-        <Box css={{ textAlign: 'center' }}>
+        <Box textAlign="center">
           <MyComponent
             title={myProps.title}
             description={myProps.description}
             isPrimary={myProps.isPrimary}
           />
         </Box>
-        <Box css={{ textAlign: 'center', marginTop: 50 }}>
+        <Box css={{ marginTop: 50 }} textAlign="center">
           <Button
             component={Link}
             variant="outlined"
