@@ -1,24 +1,10 @@
 {
   "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "prettier",
+    "../../.eslintrc.root.json",
     "react-app",
     "react-app/jest"
   ],
-  "plugins": [
-    "@typescript-eslint",
-    "import",
-    "unused-imports"
-  ],
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "sourceType": "module",
-    "project": "./tsconfig.json"
-  },
   "env": {
-    "browser": true,
-    "node": true,
     "es6": true,
     "jest": true
   },
@@ -117,27 +103,7 @@
       "error"
     ],
     "react/jsx-uses-react": "off",
-    "react/react-in-jsx-scope": "off",
-    "sort-imports": "off",
-    "import/order": [
-      "error",
-      {
-        "alphabetize": {
-          "order": "asc"
-        },
-        "groups": [
-          "builtin",
-          "external",
-          "internal",
-          "parent",
-          "sibling",
-          "index"
-        ],
-        "newlines-between": "always"
-      }
-    ],
-    "@typescript-eslint/interface-name-prefix": "off",
-    "@typescript-eslint/prefer-readonly": "warn"
+    "react/react-in-jsx-scope": "off"
   },
   "overrides": [
     {
