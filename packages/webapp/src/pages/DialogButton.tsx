@@ -11,15 +11,15 @@ const DialogButton: VFC = () => {
       css={{
         bgcolor: 'background.default',
         display: 'flex',
-        flexDirection: 'column',
         height: '100%',
         marginTop: '100px',
         justifyContent: 'start'
       }}
+      flexDirection="column"
     >
       <Container maxWidth="md">
         <DialogSample isOpen={isDialogOpen} onClose={() => setDialogOpen(false)} />
-        <Box css={{ textAlign: 'center' }}>
+        <Box textAlign="center">
           <Button
             variant="contained"
             color="secondary"
@@ -28,7 +28,7 @@ const DialogButton: VFC = () => {
             onClick={() => setDialogOpen(true)}
           >Shot Dialog</Button>
         </Box>
-        <Box css={{ textAlign: 'center', marginTop: 50 }}>
+        <Box css={{ marginTop: 50 }} textAlign="center">
           <Button
             component={Link}
             variant="outlined"
