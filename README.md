@@ -6,7 +6,13 @@
 
 ### 初期セットアップ
 
+- Using [nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+
+```sh
+nvm use
 ```
+
+```sh
 npm run npm-ci
 ```
 
