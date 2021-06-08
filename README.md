@@ -7,6 +7,8 @@
 ### 初期セットアップ
 
 - Using [nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Add setting
+  - https://github.com/nvm-sh/nvm#deeper-shell-integration
 
 ```sh
 nvm use
