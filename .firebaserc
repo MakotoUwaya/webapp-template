@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "resistance-vue"
+  },
+  "targets": {
+    "resistance-vue": {
+      "hosting": {
+        "react": [
+          "oirchan-react-tutorial"
+        ]
+      }
+    }
+  }
+}
