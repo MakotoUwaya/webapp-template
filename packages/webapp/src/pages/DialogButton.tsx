@@ -1,4 +1,4 @@
-import { Box, Button, Container } from "@material-ui/core";
+import { Box, Button, Container } from '@material-ui/core';
 import React, { useState, VFC } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -18,7 +18,10 @@ const DialogButton: VFC = () => {
       flexDirection="column"
     >
       <Container maxWidth="md">
-        <DialogSample isOpen={isDialogOpen} onClose={() => setDialogOpen(false)} />
+        <DialogSample
+          isOpen={isDialogOpen}
+          onClose={() => setDialogOpen(false)}
+        />
         <Box textAlign="center">
           <Button
             variant="contained"
@@ -26,14 +29,14 @@ const DialogButton: VFC = () => {
             // TODO: Console Warning findDOMNode is deprecated in StrictMode.
             // https://github.com/mui-org/material-ui/issues/13394
             onClick={() => setDialogOpen(true)}
-          >Shot Dialog</Button>
+          >
+            Shot Dialog
+          </Button>
         </Box>
         <Box css={{ marginTop: 50 }} textAlign="center">
-          <Button
-            component={Link}
-            variant="outlined"
-            to="/"
-          >Home</Button>
+          <Button component={Link} variant="outlined" to="/">
+            Home
+          </Button>
         </Box>
       </Container>
     </Box>

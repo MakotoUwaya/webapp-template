@@ -1,9 +1,4 @@
-import {
-  Box,
-  Button,
-  Container,
-  Typography
-} from '@material-ui/core';
+import { Box, Button, Container, Typography } from '@material-ui/core';
 import React, { VFC } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -19,21 +14,13 @@ const Notfound: VFC = () => {
       flexDirection="column"
     >
       <Container maxWidth="md">
-        <Typography
-          align="center"
-          color="textPrimary"
-          variant="h1"
-        >
+        <Typography align="center" color="textPrimary" variant="h1">
           404: The page you are looking for isn’t here
-          </Typography>
-        <Typography
-          align="center"
-          color="textPrimary"
-          variant="subtitle2"
-        >
+        </Typography>
+        <Typography align="center" color="textPrimary" variant="subtitle2">
           You either tried some shady route or you came here by mistake.
           Whichever it is, try using the navigation
-          </Typography>
+        </Typography>
         <Box textAlign="center">
           <img
             alt="Under development"
@@ -47,15 +34,13 @@ const Notfound: VFC = () => {
           />
         </Box>
         <Box css={{ marginTop: 50 }} textAlign="center">
-          <Button
-            component={Link}
-            variant="outlined"
-            to="/"
-          >Home</Button>
+          <Button component={Link} variant="outlined" to="/">
+            Home
+          </Button>
         </Box>
       </Container>
     </Box>
   );
-}
+};
 
 export default Notfound;

@@ -8,26 +8,26 @@ const theme = createMuiTheme({
   palette: {
     primary: {
       main: '#2496EA',
-      contrastText: "#fff",
+      contrastText: '#fff'
     },
     secondary: {
       main: blue[500],
-      contrastText: "#fff",
+      contrastText: '#fff'
     },
     error: {
       main: red.A200,
-      contrastText: "#fff",
+      contrastText: '#fff'
     },
     background: {
-      default: '#fff',
+      default: '#fff'
     },
     text: {
       primary: '#172b4d',
       secondary: '#6b778c'
-    },
+    }
   },
   shadows,
-  typography,
+  typography
 });
 
 export default theme;

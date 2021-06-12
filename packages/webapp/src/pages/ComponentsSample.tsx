@@ -1,4 +1,4 @@
-import { Box, Button, Container } from "@material-ui/core";
+import { Box, Button, Container } from '@material-ui/core';
 import React, { ComponentProps, VFC } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -33,15 +33,13 @@ const ComponentsSample: VFC = () => {
           />
         </Box>
         <Box css={{ marginTop: 50 }} textAlign="center">
-          <Button
-            component={Link}
-            variant="outlined"
-            to="/"
-          >Home</Button>
+          <Button component={Link} variant="outlined" to="/">
+            Home
+          </Button>
         </Box>
       </Container>
     </Box>
   );
-}
+};
 
 export default ComponentsSample;

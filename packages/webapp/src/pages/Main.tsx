@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import React, { VFC } from 'react';
 import { Outlet } from 'react-router-dom';
 
-import TopBar from "../components/TopBar";
+import TopBar from '../components/TopBar';
 
 const useLocalStyles = makeStyles(theme => ({
   mainLayoutRoot: {
@@ -27,7 +27,7 @@ const useLocalStyles = makeStyles(theme => ({
     flex: '1 1 auto',
     height: '100%',
     overflow: 'auto'
-  },
+  }
 }));
 
 const Main: VFC = () => {

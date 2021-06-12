@@ -1,25 +1,15 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:base"
-  ],
-  "labels": [
-    "dependencies",
-    "renovate"
-  ],
-  "schedule": [
-    "after 10pm and before 5am every weekday",
-    "every weekend"
-  ],
+  "extends": ["config:base"],
+  "labels": ["dependencies", "renovate"],
+  "schedule": ["after 10pm and before 5am every weekday", "every weekend"],
   "dependencyDashboard": true,
   "rebaseWhen": "never",
   "timezone": "Asia/Tokyo",
   "separateMinorPatch": true,
   "packageRules": [
     {
-      "packagePatterns": [
-        "^@types/"
-      ],
+      "packagePatterns": ["^@types/"],
       "automerge": true,
       "major": {
         "automerge": false
@@ -34,28 +24,16 @@
     },
     {
       "groupName": "linters",
-      "extends": [
-        "packages:linters"
-      ],
-      "packageNames": [
-        "prettier"
-      ],
-      "packagePatterns": [
-        "^@typescript-eslint/"
-      ]
+      "extends": ["packages:linters"],
+      "packageNames": ["prettier"],
+      "packagePatterns": ["^@typescript-eslint/"]
     },
     {
-      "matchDepTypes": [
-        "devDependencies"
-      ],
+      "matchDepTypes": ["devDependencies"],
       "automerge": true
     },
     {
-      "updateTypes": [
-        "pin",
-        "patch",
-        "minor"
-      ],
+      "updateTypes": ["pin", "patch", "minor"],
       "automerge": true
     }
   ]
