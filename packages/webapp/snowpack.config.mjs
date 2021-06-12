@@ -6,15 +6,15 @@ export default {
   },
   exclude: ["**/node_modules/**/*", "**/src/setupTests.ts"],
   plugins: [
+    "@snowpack/plugin-dotenv",
+    "@snowpack/plugin-react-refresh",
     [
       "@snowpack/plugin-webpack",
       {
         sourceMap: true,
         minifyJS: true
       }
-    ],
-    "@snowpack/plugin-react-refresh",
-    "@snowpack/plugin-dotenv"
+    ]
   ],
   routes: [
     {
