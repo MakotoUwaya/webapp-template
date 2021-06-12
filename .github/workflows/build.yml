@@ -20,7 +20,7 @@ jobs:
     - name: install
       uses: docker://oichan/firebase-emulator-docker:latest
       with:
-        args: npm run npm-ci
+        args: npm run bootstrap
       env:
         CI: true
     - name: lint

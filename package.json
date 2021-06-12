@@ -21,7 +21,7 @@
     ]
   },
   "scripts": {
-    "npm-ci": "npm ci && lerna bootstrap",
+    "bootstrap": "npm ci && lerna bootstrap",
     "prepare": "husky install",
     "versionup": "lerna version --force-publish",
     "versionup:patch": "lerna version patch --force-publish",

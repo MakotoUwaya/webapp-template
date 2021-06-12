@@ -15,7 +15,7 @@ nvm use
 ```
 
 ```sh
-npm run npm-ci
+npm run bootstrap
 ```
 
 ### 定義済 npm スクリプトの説明
@@ -25,8 +25,8 @@ npm run npm-ci
 
 | コマンド | 用途 |
 |:-----:| ----- |
-| npm-ci | 全パッケージに必要なコンポーネントをインストール |
-| prepare | husky のインストール<br>npm-ci の実行時に合わせて実行される |
+| bootstrap | 全パッケージに必要なコンポーネントをインストール |
+| prepare | husky のインストール<br>npm ci の実行時に合わせて実行される |
 | lint | 全パッケージのコード自動整形 |
 | test | 全パッケージのテスト実行 |
 | webapp:test | jest を用いた単体テストの実行 |
