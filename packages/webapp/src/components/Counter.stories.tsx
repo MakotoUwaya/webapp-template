@@ -1,4 +1,4 @@
-import { ThemeProvider } from "@material-ui/core/styles";
+import { ThemeProvider } from '@material-ui/core/styles';
 import { Story } from '@storybook/react';
 import React, { ComponentProps } from 'react';
 
@@ -13,7 +13,7 @@ const story = {
   component: Counter
 };
 
-const Template: Story<CounterProps> = (args) => (
+const Template: Story<CounterProps> = args => (
   <ThemeProvider theme={theme}>
     <Counter {...args} />
   </ThemeProvider>

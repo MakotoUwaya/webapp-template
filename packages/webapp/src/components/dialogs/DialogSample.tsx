@@ -4,8 +4,8 @@ import {
   DialogActions,
   DialogContent,
   DialogContentText,
-  DialogTitle,
-} from "@material-ui/core";
+  DialogTitle
+} from '@material-ui/core';
 import React, { VFC } from 'react';
 
 type Props = {
@@ -15,20 +15,27 @@ type Props = {
 
 const closeDialog = (props: Props) => props.onClose();
 
-const DialogSample: VFC<Props> = (props) => {
+const DialogSample: VFC<Props> = props => {
   return (
-    <Dialog open={props.isOpen} onClose={() => { closeDialog(props) }}>
+    <Dialog
+      open={props.isOpen}
+      onClose={() => {
+        closeDialog(props);
+      }}
+    >
       <DialogTitle>Dialog Sample</DialogTitle>
       <DialogContent>
-        <DialogContentText>
-          Easy to use Material UI Dialog.
-        </DialogContentText>
+        <DialogContentText>Easy to use Material UI Dialog.</DialogContentText>
       </DialogContent>
       <DialogActions>
         <Button
           color="primary"
-          onClick={() => { closeDialog(props) }}
-        >OK</Button>
+          onClick={() => {
+            closeDialog(props);
+          }}
+        >
+          OK
+        </Button>
       </DialogActions>
     </Dialog>
   );

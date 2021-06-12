@@ -1,5 +1,5 @@
-import { Button } from "@material-ui/core";
-import React, { useState, useEffect, VFC } from 'react'
+import { Button } from '@material-ui/core';
+import React, { useState, useEffect, VFC } from 'react';
 
 type Props = {
   title: string;
@@ -8,7 +8,7 @@ type Props = {
   defaultValue?: string;
 };
 
-const MyComponent: VFC<Props> = (props) => {
+const MyComponent: VFC<Props> = props => {
   // propsを参照
   const { title, description, isPrimary } = props;
   // コンポーネント内のステート

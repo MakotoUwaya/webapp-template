@@ -10,24 +10,19 @@
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-import": "2.23.4",
     "eslint-plugin-unused-imports": "1.1.1",
-    "husky": "6.0.0",
     "lerna": "4.0.0",
     "lint-staged": "11.0.0",
     "prettier": "2.3.1"
   },
-  "lint-staged": {
-    "**/*.{jsx,js,tsx,ts}": [
-      "npm run lint"
-    ]
-  },
   "scripts": {
     "bootstrap": "npm ci && lerna bootstrap",
-    "prepare": "husky install",
+    "prepare": "git config --local core.hooksPath .githook || echo 'Can not set git hooks' ",
     "versionup": "lerna version --force-publish",
     "versionup:patch": "lerna version patch --force-publish",
     "versionup:minor": "lerna version minor --force-publish",
     "versionup:major": "lerna version major --force-publish",
     "lint": "lerna run --stream lint",
+    "lint:fix": "lerna run --stream lint:fix",
     "test": "lerna run --stream test",
     "webapp:test": "lerna run --stream --scope react-tutorial-webapp test",
     "build": "lerna run --stream build",

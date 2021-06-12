@@ -1,8 +1,4 @@
-import {
-  Toolbar,
-  Typography,
-  AppBar,
-} from "@material-ui/core";
+import { Toolbar, Typography, AppBar } from '@material-ui/core';
 import React, { VFC } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -16,6 +12,6 @@ const TopBar: VFC = () => {
       </Toolbar>
     </AppBar>
   );
-}
+};
 
 export default TopBar;

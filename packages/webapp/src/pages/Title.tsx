@@ -1,4 +1,4 @@
-import { Box, Button, Container, Grid, Typography } from "@material-ui/core";
+import { Box, Button, Container, Grid, Typography } from '@material-ui/core';
 import React, { VFC } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -17,21 +17,13 @@ const Title: VFC = () => {
       <Container maxWidth="md">
         <Typography variant="h1" align="center" gutterBottom={true}>
           Material-UI
-          </Typography>
+        </Typography>
         <Typography variant="subtitle1" align="center" gutterBottom={true}>
           example project
-          </Typography>
+        </Typography>
         <Box css={{ marginTop: 50 }} textAlign="center">
-          <Grid
-            container
-            spacing={3}
-
-          >
-            <Grid
-              item
-              xs={12}
-              md={6}
-            >
+          <Grid container spacing={3}>
+            <Grid item xs={12} md={6}>
               <Button
                 color="primary"
                 component={Link}
@@ -41,13 +33,9 @@ const Title: VFC = () => {
                 variant="contained"
               >
                 Dialog Button
-                </Button>
+              </Button>
             </Grid>
-            <Grid
-              item
-              xs={12}
-              md={6}
-            >
+            <Grid item xs={12} md={6}>
               <Button
                 color="primary"
                 component={Link}
@@ -57,13 +45,13 @@ const Title: VFC = () => {
                 variant="contained"
               >
                 Sample Component
-                </Button>
+              </Button>
             </Grid>
           </Grid>
         </Box>
       </Container>
     </Box>
   );
-}
+};
 
 export default Title;

@@ -1,5 +1,5 @@
 import CssBaseline from '@material-ui/core/CssBaseline';
-import { ThemeProvider } from "@material-ui/core/styles";
+import { ThemeProvider } from '@material-ui/core/styles';
 import React, { VFC } from 'react';
 import { useRoutes } from 'react-router-dom';
 
@@ -17,6 +17,6 @@ const App: VFC = () => {
       {routing}
     </ThemeProvider>
   );
-}
+};
 
 export default App;

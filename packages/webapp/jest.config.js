@@ -1,8 +1,6 @@
 module.exports = {
   ...require('@snowpack/app-scripts-react/jest.config.js')(),
-  roots: [
-    '<rootDir>/src'
-  ],
+  roots: ['<rootDir>/src'],
   collectCoverage: true,
   collectCoverageFrom: [
     'src/**/*.{js,jsx,ts,tsx}',
@@ -12,12 +10,8 @@ module.exports = {
     '!src/*.{js,jsx,ts,tsx}'
   ],
   coverageReporters: ['json', 'lcov', 'text-summary'],
-  setupFiles: [
-    'react-app-polyfill/jsdom'
-  ],
-  setupFilesAfterEnv: [
-    '<rootDir>/src/setupTests.ts'
-  ],
+  setupFiles: ['react-app-polyfill/jsdom'],
+  setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
   testMatch: [
     '<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}',
     '<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}'

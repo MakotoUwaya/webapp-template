@@ -5,7 +5,9 @@
   "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build",
-    "lint": "eslint --fix .",
+    "lint": "eslint --ext .ts,.tsx ./src",
+    "lint:fix": "eslint --fix --ext .ts,.tsx ./src && prettier --write 'src/**/*.{ts,tsx}'",
+    "precommit": "lint-staged",
     "test": "jest",
     "test:watch": "jest --watch",
     "storybook": "start-storybook -p 6006",

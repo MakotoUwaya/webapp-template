@@ -1,4 +1,4 @@
-import { ThemeProvider } from "@material-ui/core/styles";
+import { ThemeProvider } from '@material-ui/core/styles';
 import { Story } from '@storybook/react';
 import React, { ComponentProps } from 'react';
 
@@ -13,7 +13,7 @@ const story = {
   component: DialogSample
 };
 
-const Template: Story<DialogSampleProps> = (args) => (
+const Template: Story<DialogSampleProps> = args => (
   <ThemeProvider theme={theme}>
     <DialogSample {...args} />
   </ThemeProvider>
