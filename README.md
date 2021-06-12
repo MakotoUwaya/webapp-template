@@ -26,7 +26,7 @@ npm run bootstrap
 | コマンド         | 用途                                                                                                           |
 | :--------------- | -------------------------------------------------------------------------------------------------------------- |
 | bootstrap        | 全パッケージに必要なコンポーネントをインストール                                                               |
-| prepare          | husky のインストール<br>npm ci の実行時に合わせて実行される                                                    |
+| prepare          | git hook の設定<br>https://docs.npmjs.com/cli/v7/using-npm/scripts#life-cycle-scripts                          |
 | lint             | 全パッケージのコード自動整形                                                                                   |
 | test             | 全パッケージのテスト実行                                                                                       |
 | webapp:test      | jest を用いた単体テストの実行                                                                                  |
