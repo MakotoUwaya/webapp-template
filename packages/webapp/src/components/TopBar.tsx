@@ -7,7 +7,7 @@ const TopBar: VFC = () => {
     <AppBar>
       <Toolbar>
         <Typography variant="h3" color="inherit" component={Link} to="/">
-          React + Material UI + TypeScript Sample
+          React Tutorial
         </Typography>
       </Toolbar>
     </AppBar>
