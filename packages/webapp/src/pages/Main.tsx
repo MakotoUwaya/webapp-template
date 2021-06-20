@@ -1,5 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles';
-import React, { VFC } from 'react';
+import React from 'react';
 import { Outlet } from 'react-router-dom';
 
 import TopBar from '../components/TopBar';
@@ -30,7 +30,7 @@ const useLocalStyles = makeStyles(theme => ({
   }
 }));
 
-const Main: VFC = () => {
+const Main: () => JSX.Element = () => {
   const localClasses = useLocalStyles();
 
   return (

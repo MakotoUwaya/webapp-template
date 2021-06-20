@@ -1,5 +1,5 @@
 import { Button } from '@material-ui/core';
-import React, { useState, useEffect, VFC } from 'react';
+import React, { useState } from 'react';
 
 type Props = {
   title: string;
@@ -8,18 +8,9 @@ type Props = {
   defaultValue?: string;
 };
 
-const MyComponent: VFC<Props> = props => {
-  // propsを参照
+const MyComponent: (props: Props) => JSX.Element = props => {
   const { title, description, isPrimary } = props;
-  // コンポーネント内のステート
   const [count, setCount] = useState(0);
-  // ライフサイクルメソッド
-  useEffect(() => {
-    // 作成時（初回レンダリング直後）に呼ばれる箇所
-    return () => {
-      // 終了時に呼ばれる箇所
-    };
-  }, []);
 
   return (
     <div>

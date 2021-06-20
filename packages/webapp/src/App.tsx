@@ -1,13 +1,13 @@
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider } from '@material-ui/core/styles';
-import React, { VFC } from 'react';
+import React from 'react';
 import { useRoutes } from 'react-router-dom';
 
 import routes from './routes';
 import GlobalStyles from './styles/GlobalStyles';
 import theme from './themes/theme';
 
-const App: VFC = () => {
+const App: () => JSX.Element = () => {
   const routing = useRoutes(routes);
 
   return (

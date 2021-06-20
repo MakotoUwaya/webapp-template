@@ -2,7 +2,7 @@ import '@storybook/addon-console';
 import { ThemeProvider } from '@material-ui/core/styles';
 import { StylesProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import React, { VFC } from 'react';
+import React from 'react';
 
 import theme from '../src/themes/theme';
 
@@ -20,7 +20,7 @@ const createGenerateId = () => {
 };
 
 export const decorators = [
-  (story: () => VFC) => (
+  (story: () => JSX.Element) => (
     <StylesProvider generateClassName={createGenerateId()}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
