@@ -24,6 +24,7 @@
     "lint": "lerna run --stream lint",
     "lint:fix": "lerna run --stream lint:fix",
     "test": "lerna run --stream test",
+    "test:updateSnapshot": "lerna run --stream test:updateSnapshot",
     "webapp:test": "lerna run --stream --scope react-tutorial-webapp test",
     "build": "lerna run --stream build",
     "webapp:build": "lerna run --stream --scope react-tutorial-webapp build",
