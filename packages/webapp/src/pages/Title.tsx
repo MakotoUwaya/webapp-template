@@ -1,8 +1,20 @@
 import { Box, Button, Container, Grid, Typography } from '@material-ui/core';
-import React, { VFC } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Title: VFC = () => {
+import { useDependency } from '../hooks/DependencyHook';
+
+const Title: () => JSX.Element = () => {
+  const authenticationService = useDependency('authenticationService');
+
+  const signIn = async () => {
+    await authenticationService.logIn();
+  };
+
+  const signOut = async () => {
+    await authenticationService.logOut();
+  };
+
   return (
     <Box
       css={{
@@ -45,6 +57,36 @@ const Title: VFC = () => {
                 variant="contained"
               >
                 Sample Component
+              </Button>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Button
+                fullWidth
+                size="large"
+                variant="contained"
+                onClick={signIn}
+              >
+                Login
+              </Button>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Button
+                fullWidth
+                size="large"
+                variant="contained"
+                onClick={signOut}
+              >
+                Logout
+              </Button>
+            </Grid>
+            <Grid item xs={12}>
+              <Button
+                fullWidth
+                size="large"
+                variant="contained"
+                onClick={() => console.log(authenticationService.token)}
+              >
+                test
               </Button>
             </Grid>
           </Grid>

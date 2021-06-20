@@ -1,5 +1,4 @@
 import { createStyles, makeStyles } from '@material-ui/core';
-import { VFC } from 'react';
 
 const useStyles = makeStyles(() =>
   createStyles({
@@ -31,9 +30,8 @@ const useStyles = makeStyles(() =>
   })
 );
 
-const GlobalStyles: VFC = () => {
+const GlobalStyles: () => JSX.Element | null = () => {
   useStyles();
-
   return null;
 };
 

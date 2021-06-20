@@ -1,12 +1,23 @@
 {
-  "include": ["src"],
+  "include": [
+    "src/**/*",
+    ".storybook/**/*",
+    "storyshots/storyshots.test.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "module": "esnext",
     "target": "esnext",
     "moduleResolution": "node",
     "jsx": "react",
-    "baseUrl": "src",
+    "baseUrl": ".",
     /* paths - import rewriting/resolving */
     "paths": {
       // If you configured any Snowpack aliases, add them here.
@@ -17,7 +28,9 @@
     "noEmit": true,
     "strict": true,
     "skipLibCheck": true,
-    "types": ["snowpack-env"],
+    "types": [
+      "snowpack-env"
+    ],
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,

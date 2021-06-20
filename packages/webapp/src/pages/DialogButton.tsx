@@ -1,10 +1,10 @@
 import { Box, Button, Container } from '@material-ui/core';
-import React, { useState, VFC } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import DialogSample from '../components/dialogs/DialogSample';
 
-const DialogButton: VFC = () => {
+const DialogButton: () => JSX.Element = () => {
   const [isDialogOpen, setDialogOpen] = useState(false);
   return (
     <Box

@@ -1,5 +1,9 @@
 {
-  "extends": ["../../.eslintrc.root.json", "react-app", "react-app/jest"],
+  "extends": [
+    "../../.eslintrc.root.json",
+    "react-app",
+    "react-app/jest"
+  ],
   "env": {
     "es6": true,
     "jest": true
@@ -7,8 +11,15 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [".ts", ".tsx", ".js", ".jsx"],
-        "moduleDirectory": ["src"]
+        "extensions": [
+          ".ts",
+          ".tsx",
+          ".js",
+          ".jsx"
+        ],
+        "moduleDirectory": [
+          "src"
+        ]
       }
     }
   },
@@ -30,7 +41,9 @@
       "error",
       {
         "selector": "default",
-        "format": ["camelCase"],
+        "format": [
+          "camelCase"
+        ],
         "leadingUnderscore": "allow",
         "trailingUnderscore": "allow",
         "filter": {
@@ -40,17 +53,26 @@
       },
       {
         "selector": "variable",
-        "format": ["camelCase", "PascalCase", "UPPER_CASE"],
+        "format": [
+          "camelCase",
+          "PascalCase",
+          "UPPER_CASE"
+        ],
         "leadingUnderscore": "allow",
         "trailingUnderscore": "allow"
       },
       {
         "selector": "typeLike",
-        "format": ["PascalCase"]
+        "format": [
+          "PascalCase"
+        ]
       },
       {
         "selector": "property",
-        "format": ["camelCase", "snake_case"],
+        "format": [
+          "camelCase",
+          "snake_case"
+        ],
         "filter": {
           "regex": "Service-Worker",
           "match": false
@@ -77,13 +99,17 @@
         "additionalHooks": "(useAsync)"
       }
     ],
-    "react/jsx-pascal-case": ["error"],
+    "react/jsx-pascal-case": [
+      "error"
+    ],
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off"
   },
   "overrides": [
     {
-      "files": ["*.{test,d}.ts"],
+      "files": [
+        "*.{test,spec,d}.ts"
+      ],
       "rules": {
         "@typescript-eslint/no-unused-vars": "off",
         "@typescript-eslint/no-use-before-define": "off",
