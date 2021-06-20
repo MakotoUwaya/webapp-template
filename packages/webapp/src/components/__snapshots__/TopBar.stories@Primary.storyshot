@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots react-tutorial/TopBar Primary 1`] = `
+<header
+  className="MuiPaper-root-11 MuiAppBar-root-0 MuiAppBar-positionFixed-1 MuiAppBar-colorPrimary-7 mui-fixed MuiPaper-elevation4-18"
+>
+  <div
+    className="MuiToolbar-root-39 MuiToolbar-regular-41 MuiToolbar-gutters-40"
+  >
+    <a
+      className="MuiTypography-root-43 MuiTypography-h3-50 MuiTypography-colorInherit-65"
+      href="/"
+      onClick={[Function]}
+    >
+      React Tutorial
+    </a>
+  </div>
+</header>
+`;
