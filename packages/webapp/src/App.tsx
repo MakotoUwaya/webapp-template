@@ -1,21 +1,42 @@
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider } from '@material-ui/core/styles';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useRoutes } from 'react-router-dom';
 
+import { DependencyProvider } from './hooks/DependencyHook';
 import routes from './routes';
+import type { Services } from './services/SetupDependencies';
 import GlobalStyles from './styles/GlobalStyles';
 import theme from './themes/theme';
 
 const App: () => JSX.Element = () => {
+  const [services, setServices] = useState<Services | null>(null);
   const routing = useRoutes(routes);
 
+  useEffect(() => {
+    import(
+      /* webpackChunkName: "SetupDependencies" */ './services/SetupDependencies'
+    )
+      .then(module => module.setupDependencies())
+      .then(services => {
+        setServices(services);
+      });
+  }, []);
+
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <GlobalStyles />
-      {routing}
-    </ThemeProvider>
+    <>
+      {services !== null ? (
+        <DependencyProvider services={services}>
+          <ThemeProvider theme={theme}>
+            <CssBaseline />
+            <GlobalStyles />
+            {routing}
+          </ThemeProvider>
+        </DependencyProvider>
+      ) : (
+        <span>Loading...</span>
+      )}
+    </>
   );
 };
 
