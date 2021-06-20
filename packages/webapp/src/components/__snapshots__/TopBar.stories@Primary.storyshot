@@ -14,6 +14,9 @@ exports[`Storyshots react-tutorial/TopBar Primary 1`] = `
     >
       React Tutorial
     </a>
+    <div
+      className="MuiBox-root-73 MuiBox-root-74"
+    />
   </div>
 </header>
 `;

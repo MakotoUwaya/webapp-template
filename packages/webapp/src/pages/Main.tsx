@@ -3,6 +3,7 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 
 import TopBar from '../components/TopBar';
+import { useUserInfo } from '../hooks/UserInfoHooks';
 
 const useLocalStyles = makeStyles(theme => ({
   mainLayoutRoot: {
@@ -32,10 +33,11 @@ const useLocalStyles = makeStyles(theme => ({
 
 const Main: () => JSX.Element = () => {
   const localClasses = useLocalStyles();
+  const userInfo = useUserInfo();
 
   return (
     <div className={localClasses.mainLayoutRoot}>
-      <TopBar />
+      <TopBar userInfo={userInfo} />
       <div className={localClasses.mainLayoutWrapper}>
         <div className={localClasses.mainLayoutContainer}>
           <div className={localClasses.mainLayoutContent}>

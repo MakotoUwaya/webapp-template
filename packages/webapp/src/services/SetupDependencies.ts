@@ -7,7 +7,7 @@ export type Services = {
 
 export async function setupDependencies(): Promise<Services> {
   const AuthenticationServiceInst = new Auth0AuthenticationService();
-  // await AuthenticationServiceInst.restoreAuthState();
+  await AuthenticationServiceInst.restoreAuthState();
   return {
     authenticationService: AuthenticationServiceInst
   };

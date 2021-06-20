@@ -84,10 +84,7 @@ const Title: () => JSX.Element = () => {
                 fullWidth
                 size="large"
                 variant="contained"
-                onClick={async () => {
-                  console.log(await authenticationService.getUser());
-                  console.log(await authenticationService.getToken());
-                }}
+                onClick={() => console.log(authenticationService.token)}
               >
                 test
               </Button>

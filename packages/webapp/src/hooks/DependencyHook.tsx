@@ -9,7 +9,6 @@ type DependencyProviderProps = {
 };
 
 export function useDependency<K extends keyof Services>(key: K): Services[K] {
-  console.log('use context');
   const services = useContext(DependencyContext);
   if (services === null) {
     throw new Error('Not found dependency');

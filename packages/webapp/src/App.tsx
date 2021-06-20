@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { useRoutes } from 'react-router-dom';
 
 import { DependencyProvider } from './hooks/DependencyHook';
+import { UserInfoProvider } from './hooks/UserInfoHooks';
 import routes from './routes';
 import type { Services } from './services/SetupDependencies';
 import GlobalStyles from './styles/GlobalStyles';
@@ -27,11 +28,13 @@ const App: () => JSX.Element = () => {
     <>
       {services !== null ? (
         <DependencyProvider services={services}>
-          <ThemeProvider theme={theme}>
-            <CssBaseline />
-            <GlobalStyles />
-            {routing}
-          </ThemeProvider>
+          <UserInfoProvider>
+            <ThemeProvider theme={theme}>
+              <CssBaseline />
+              <GlobalStyles />
+              {routing}
+            </ThemeProvider>
+          </UserInfoProvider>
         </DependencyProvider>
       ) : (
         <span>Loading...</span>

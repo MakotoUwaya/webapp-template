@@ -5,9 +5,20 @@ export type UserInfo = {
   readonly avator: string;
 };
 
+export const UserChangedReason = {
+  logIn: 'logIn',
+  restored: 'restored',
+  logOut: 'logOut',
+  sessionExpired: 'sessionExpired'
+} as const;
+export type UserChangedReason = typeof UserChangedReason[keyof typeof UserChangedReason];
+
 export interface IAuthenticationService {
   logIn(): Promise<void>;
   logOut(): Promise<void>;
-  getToken(): Promise<string | undefined>;
-  getUser(): Promise<UserInfo | undefined>;
+  token: string | null;
+  subscribeUserChanged(
+    handler: (_user: UserInfo | null, _reason: UserChangedReason) => void
+  ): () => void;
+  restoreAuthState(): Promise<void>;
 }
