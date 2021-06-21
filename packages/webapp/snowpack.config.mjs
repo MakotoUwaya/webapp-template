@@ -8,13 +8,13 @@ export default {
   plugins: [
     "@snowpack/plugin-dotenv",
     "@snowpack/plugin-react-refresh",
-    // [
-    //   "@snowpack/plugin-webpack",
-    //   {
-    //     sourceMap: true,
-    //     minifyJS: true
-    //   }
-    // ]
+    [
+      "@snowpack/plugin-webpack",
+      {
+        sourceMap: true,
+        minifyJS: true
+      }
+    ]
   ],
   routes: [
     {
