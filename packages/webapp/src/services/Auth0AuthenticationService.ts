@@ -65,6 +65,7 @@ export class Auth0AuthenticationService implements IAuthenticationService {
       this.userInfo = null;
       this.onUserChanged(this.userInfo, UserChangedReason.logOut);
     } catch (error) {
+      // eslint-disable-next-line no-console
       console.error('Error', error);
     }
     return Promise.resolve();
