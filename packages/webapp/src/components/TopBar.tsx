@@ -8,7 +8,7 @@ type TopBarProps = {
   userInfo: UserInfo | null;
 };
 
-const TopBar: (props: TopBarProps) => JSX.Element = props => (
+const TopBar = (props: TopBarProps): JSX.Element => (
   <AppBar>
     <Toolbar>
       <Typography variant="h3" color="inherit" component={Link} to="/">

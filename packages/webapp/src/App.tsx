@@ -10,7 +10,7 @@ import type { Services } from './services/SetupDependencies';
 import GlobalStyles from './styles/GlobalStyles';
 import theme from './themes/theme';
 
-const App: () => JSX.Element = () => {
+const App = (): JSX.Element => {
   const [services, setServices] = useState<Services | null>(null);
   const routing = useRoutes(routes);
 

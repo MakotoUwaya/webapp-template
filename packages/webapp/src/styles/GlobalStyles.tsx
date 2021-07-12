@@ -30,7 +30,7 @@ const useStyles = makeStyles(() =>
   })
 );
 
-const GlobalStyles: () => JSX.Element | null = () => {
+const GlobalStyles = (): JSX.Element | null => {
   useStyles();
   return null;
 };

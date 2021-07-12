@@ -1,10 +1,25 @@
 import { Box, Button, Container, Grid, Typography } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { useDependency } from '../hooks/DependencyHook';
 
-const Title: () => JSX.Element = () => {
+const useLocalStyles = makeStyles(() => ({
+  root: {
+    bgcolor: 'background.default',
+    display: 'flex',
+    height: '100%',
+    paddingTop: '100px',
+    justifyContent: 'start'
+  },
+  buttonSection: {
+    marginTop: 50
+  }
+}));
+
+const Title = (): JSX.Element => {
+  const classNames = useLocalStyles();
   const authenticationService = useDependency('authenticationService');
 
   const signIn = async () => {
@@ -16,16 +31,7 @@ const Title: () => JSX.Element = () => {
   };
 
   return (
-    <Box
-      css={{
-        bgcolor: 'background.default',
-        display: 'flex',
-        height: '100%',
-        paddingTop: '100px',
-        justifyContent: 'start'
-      }}
-      flexDirection="column"
-    >
+    <Box className={classNames.root} flexDirection="column">
       <Container maxWidth="md">
         <Typography variant="h1" align="center" gutterBottom={true}>
           Material-UI
@@ -33,7 +39,7 @@ const Title: () => JSX.Element = () => {
         <Typography variant="subtitle1" align="center" gutterBottom={true}>
           example project
         </Typography>
-        <Box css={{ marginTop: 50 }} textAlign="center">
+        <Box className={classNames.buttonSection} textAlign="center">
           <Grid container spacing={3}>
             <Grid item xs={12} md={6}>
               <Button
