@@ -13,7 +13,7 @@ type Props = {
   onClose: () => void;
 };
 
-const DialogSample: (props: Props) => JSX.Element = props => (
+const DialogSample = (props: Props): JSX.Element => (
   <Dialog open={props.isOpen} onClose={props.onClose}>
     <DialogTitle>Dialog Sample</DialogTitle>
     <DialogContent>

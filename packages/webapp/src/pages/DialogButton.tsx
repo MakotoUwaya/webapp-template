@@ -1,22 +1,28 @@
 import { Box, Button, Container } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import DialogSample from '../components/dialogs/DialogSample';
 
-const DialogButton: () => JSX.Element = () => {
+const useLocalStyles = makeStyles(() => ({
+  root: {
+    bgcolor: 'background.default',
+    display: 'flex',
+    height: '100%',
+    marginTop: '100px',
+    justifyContent: 'start'
+  },
+  buttonSection: {
+    marginTop: 50
+  }
+}));
+
+const DialogButton = (): JSX.Element => {
+  const classNames = useLocalStyles();
   const [isDialogOpen, setDialogOpen] = useState(false);
   return (
-    <Box
-      css={{
-        bgcolor: 'background.default',
-        display: 'flex',
-        height: '100%',
-        marginTop: '100px',
-        justifyContent: 'start'
-      }}
-      flexDirection="column"
-    >
+    <Box className={classNames.root} flexDirection="column">
       <Container maxWidth="md">
         <DialogSample
           isOpen={isDialogOpen}
@@ -33,7 +39,7 @@ const DialogButton: () => JSX.Element = () => {
             Shot Dialog
           </Button>
         </Box>
-        <Box css={{ marginTop: 50 }} textAlign="center">
+        <Box className={classNames.buttonSection} textAlign="center">
           <Button component={Link} variant="outlined" to="/">
             Home
           </Button>

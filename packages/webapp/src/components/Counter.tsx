@@ -8,7 +8,7 @@ type Props = {
   defaultValue?: string;
 };
 
-const MyComponent: (props: Props) => JSX.Element = props => {
+const MyComponent = (props: Props): JSX.Element => {
   const { title, description, isPrimary } = props;
   const [count, setCount] = useState(0);
 

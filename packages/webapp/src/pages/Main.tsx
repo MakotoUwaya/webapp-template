@@ -31,7 +31,7 @@ const useLocalStyles = makeStyles(theme => ({
   }
 }));
 
-const Main: () => JSX.Element = () => {
+const Main = (): JSX.Element => {
   const localClasses = useLocalStyles();
   const userInfo = useUserInfo();
 
