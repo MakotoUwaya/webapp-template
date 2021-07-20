@@ -27,7 +27,7 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "7.14.6",
+    "@babel/core": "7.14.8",
     "@snowpack/app-scripts-react": "2.0.1",
     "@snowpack/plugin-react-refresh": "2.5.0",
     "@snowpack/plugin-webpack": "3.0.0",
