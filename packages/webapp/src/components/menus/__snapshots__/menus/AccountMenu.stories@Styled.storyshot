@@ -3,10 +3,10 @@
 exports[`Storyshots react-tutorial/menus/AccountMenu Styled 1`] = `
 <div>
   <div
-    className="MuiBox-root-5 MuiBox-root-6"
+    className="MuiBox-root-1 MuiBox-root-2"
   >
     <button
-      className="MuiButtonBase-root-36 MuiButton-root-7 MuiButton-text-9 MuiButton-disableElevation-18"
+      className="MuiButtonBase-root-32 MuiButton-root-3 MuiButton-text-5 MuiButton-disableElevation-14"
       data-testid="accountMenu"
       disabled={false}
       onBlur={[Function]}
@@ -25,31 +25,22 @@ exports[`Storyshots react-tutorial/menus/AccountMenu Styled 1`] = `
       type="button"
     >
       <span
-        className="MuiButton-label-8"
+        className="MuiButton-label-4"
       >
         <div
-          className="MuiBox-root-5 MuiBox-root-39"
-        >
-          <p
-            className="MuiTypography-root-40 makeStyles-userNameText-4 MuiTypography-body1-42"
-          >
-            サンプル 太郎
-          </p>
-        </div>
-        <span
-          className="MuiButton-endIcon-32 makeStyles-endIcon-2 MuiButton-iconSizeMedium-34"
+          className="MuiAvatar-root-35 MuiAvatar-circular-38 MuiAvatar-colorDefault-36"
         >
           <svg
             aria-hidden={true}
-            className="MuiSvgIcon-root-70 makeStyles-menuToggleIcon-1"
+            className="MuiSvgIcon-root-43 MuiAvatar-fallback-42"
             focusable="false"
             viewBox="0 0 24 24"
           >
             <path
-              d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+              d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
             />
           </svg>
-        </span>
+        </div>
       </span>
     </button>
   </div>
