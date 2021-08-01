@@ -23,6 +23,7 @@ export default {
       dest: "/index.html"
     }
   ],
+  workspaceRoot: '../../',
   optimize: {
     /* ... */
   },

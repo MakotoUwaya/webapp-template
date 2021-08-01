@@ -1,11 +1,13 @@
-import { AppBar, Avatar, Box, Toolbar, Typography } from '@material-ui/core';
+import { User } from '@auth0/auth0-react';
+import { AppBar, Box, Toolbar, Typography } from '@material-ui/core';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { UserInfo } from '../services/IAuthenticationService';
+import AccountMenu from '../components/menus/AccountMenu';
 
 type TopBarProps = {
-  userInfo: UserInfo | null;
+  user?: User;
+  logOut: () => void;
 };
 
 const TopBar = (props: TopBarProps): JSX.Element => (
@@ -15,9 +17,7 @@ const TopBar = (props: TopBarProps): JSX.Element => (
         React Tutorial
       </Typography>
       <Box flexGrow={1} />
-      {props.userInfo && (
-        <Avatar alt={props.userInfo.userName} src={props.userInfo.avator} />
-      )}
+      {props.user && <AccountMenu user={props.user} onLogout={props.logOut} />}
     </Toolbar>
   </AppBar>
 );
