@@ -21,10 +21,7 @@ const emptyMethod = () => {
 
 const commonProps: Pick<PlainButtonComponentProps, 'classNames'> = {
   classNames: {
-    accountIcon: '',
-    menuToggleIcon: '',
-    endIcon: '',
-    menuItemIcon: ''
+    endIcon: ''
   }
 };
 
