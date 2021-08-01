@@ -24,8 +24,7 @@ const commonProps: Pick<PlainButtonComponentProps, 'classNames'> = {
     accountIcon: '',
     menuToggleIcon: '',
     endIcon: '',
-    menuItemIcon: '',
-    userNameText: ''
+    menuItemIcon: ''
   }
 };
 
@@ -43,14 +42,18 @@ Plain.args = {
     vertical: 'bottom',
     horizontal: 'right'
   },
-  userName: 'サンプル 太郎',
-  email: 'taro.sample@test.chukai.example',
+  user: {
+    name: 'サンプル 太郎',
+    email: 'taro.sample@test.chukai.example'
+  },
   isOpen: false,
   onLogout: emptyMethod,
   onMenuClosed: emptyMethod,
   buttonComponent: plainButtonComponent({
     ...commonProps,
-    userName: 'サンプル 太郎',
+    user: {
+      name: 'サンプル 太郎'
+    },
     onIconClicked: emptyMethod
   })
 };
@@ -62,8 +65,10 @@ const Template: Story<AccountMenuProps> = args => (
 );
 export const Styled = Template.bind({});
 Styled.args = {
-  userName: 'サンプル 太郎',
-  email: 'taro.sample@test.chukai.example'
+  user: {
+    name: 'サンプル 太郎',
+    email: 'taro.sample@test.chukai.example'
+  }
 };
 
 export default story;

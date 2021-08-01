@@ -17,13 +17,7 @@ const TopBar = (props: TopBarProps): JSX.Element => (
         React Tutorial
       </Typography>
       <Box flexGrow={1} />
-      {props.user && (
-        <AccountMenu
-          userName={props.user.name || ''}
-          email={props.user.email || ''}
-          onLogout={props.logOut}
-        />
-      )}
+      {props.user && <AccountMenu user={props.user} onLogout={props.logOut} />}
     </Toolbar>
   </AppBar>
 );

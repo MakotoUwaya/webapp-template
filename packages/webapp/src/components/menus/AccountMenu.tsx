@@ -1,4 +1,6 @@
+import { User } from '@auth0/auth0-react';
 import {
+  Avatar,
   Box,
   Button,
   Divider,
@@ -8,44 +10,26 @@ import {
   Typography
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import React, { useState, useCallback, MouseEvent } from 'react';
 
 type AccountMenuProps = {
   buttonComponent: JSX.Element;
   anchorElement: Element | null;
   menuPosition: PopoverOrigin;
-  userName: string;
-  email: string;
+  user?: User;
   isOpen: boolean;
   onLogout: () => void;
   onMenuClosed: () => void;
 };
 
 type ButtonComponentProps = {
-  userName: string;
+  user?: User;
   onIconClicked: (event: MouseEvent) => void;
 };
 
-const useLocalStyles = makeStyles(theme => ({
-  accountIcon: {
-    fontSize: '24px',
-    color: theme.palette.text.secondary
-  },
-  menuToggleIcon: {
-    color: 'white'
-  },
+const useLocalStyles = makeStyles(() => ({
   endIcon: {
     marginLeft: '4px'
-  },
-  menuItemIcon: {
-    fontSize: '1rem',
-    color: theme.palette.text.secondary,
-    marginLeft: theme.spacing(1)
-  },
-  userNameText: {
-    color: 'white',
-    fontSize: theme.typography.pxToRem(16)
   }
 }));
 type LocalStyles = {
@@ -68,9 +52,9 @@ export const PlainAccountMenu = (
       onClose={props.onMenuClosed}
     >
       <Box px={2} py={1}>
-        <Typography>{props.userName} としてログイン中</Typography>
+        <Typography>{props.user?.name || ''} としてログイン中</Typography>
         <Typography variant="body2" color="textSecondary">
-          {props.email}
+          {props.user?.email || ''}
         </Typography>
       </Box>
       <Divider />
@@ -89,23 +73,16 @@ export const PlainButtonComponent = (
     <Button
       data-testid="accountMenu"
       onClick={props.onIconClicked}
-      endIcon={
-        <KeyboardArrowDownIcon className={props.classNames.menuToggleIcon} />
-      }
       disableElevation
       classes={{ endIcon: props.classNames.endIcon }}
     >
-      <Box display="flex" flexDirection="column" alignItems="flex-end">
-        <Typography className={props.classNames.userNameText}>
-          {props.userName}
-        </Typography>
-      </Box>
+      <Avatar alt={props.user?.name || ''} src={props.user?.picture} />
     </Button>
   </Box>
 );
 
 const AccountMenu = (
-  props: Pick<AccountMenuProps, 'userName' | 'email' | 'onLogout'>
+  props: Pick<AccountMenuProps, 'user' | 'onLogout'>
 ): JSX.Element => {
   const [anchorElement, setAnchorElement] = useState<Element | null>(null);
   const isOpen = anchorElement != null;
@@ -128,8 +105,7 @@ const AccountMenu = (
     <PlainAccountMenu
       {...props}
       classNames={classNames}
-      userName={props.userName}
-      email={props.email}
+      user={props.user}
       anchorElement={anchorElement}
       menuPosition={menuPosition}
       isOpen={isOpen}
@@ -138,7 +114,7 @@ const AccountMenu = (
       buttonComponent={
         <PlainButtonComponent
           classNames={classNames}
-          userName={props.userName}
+          user={props.user}
           onIconClicked={onIconClicked}
         />
       }
