@@ -1,9 +1,8 @@
+import { useAuth0 } from '@auth0/auth0-react';
 import { Box, Button, Container, Grid, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-import { useDependency } from '../hooks/DependencyHook';
 
 const useLocalStyles = makeStyles(() => ({
   root: {
@@ -20,15 +19,7 @@ const useLocalStyles = makeStyles(() => ({
 
 const Title = (): JSX.Element => {
   const classNames = useLocalStyles();
-  const authenticationService = useDependency('authenticationService');
-
-  const signIn = async () => {
-    await authenticationService.logIn();
-  };
-
-  const signOut = async () => {
-    await authenticationService.logOut();
-  };
+  const { getAccessTokenSilently } = useAuth0();
 
   return (
     <Box className={classNames.root} flexDirection="column">
@@ -65,33 +56,15 @@ const Title = (): JSX.Element => {
                 Sample Component
               </Button>
             </Grid>
-            <Grid item xs={12} md={6}>
-              <Button
-                fullWidth
-                size="large"
-                variant="contained"
-                onClick={signIn}
-              >
-                Login
-              </Button>
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <Button
-                fullWidth
-                size="large"
-                variant="contained"
-                onClick={signOut}
-              >
-                Logout
-              </Button>
-            </Grid>
             <Grid item xs={12}>
               <Button
                 fullWidth
                 size="large"
                 variant="contained"
                 // eslint-disable-next-line no-console
-                onClick={() => console.log(authenticationService.token)}
+                onClick={async () =>
+                  console.log('TOKEN:', await getAccessTokenSilently())
+                }
               >
                 test
               </Button>
