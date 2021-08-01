@@ -42,13 +42,13 @@ const useLocalStyles = makeStyles(theme => ({
 
 const Main = (): JSX.Element => {
   const classNames = useLocalStyles();
-  const { isAuthenticated, loginWithRedirect, user } = useAuth0();
+  const { isAuthenticated, loginWithRedirect, logout, user } = useAuth0();
 
   return (
     <div className={classNames.mainLayoutRoot}>
       {isAuthenticated ? (
         <>
-          <TopBar user={user} />
+          <TopBar user={user} logOut={logout} />
           <div className={classNames.mainLayoutWrapper}>
             <div className={classNames.mainLayoutContainer}>
               <div className={classNames.mainLayoutContent}>
