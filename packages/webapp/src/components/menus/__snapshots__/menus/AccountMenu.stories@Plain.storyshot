@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots react-tutorial/menus/AccountMenu Plain 1`] = `
+<div
+  className="MuiBox-root-0 MuiBox-root-1"
+>
+  <button
+    className="MuiButtonBase-root-31 MuiButton-root-2 MuiButton-text-4 MuiButton-disableElevation-13"
+    data-testid="accountMenu"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onDragLeave={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex={0}
+    type="button"
+  >
+    <span
+      className="MuiButton-label-3"
+    >
+      <div
+        className="MuiBox-root-0 MuiBox-root-34"
+      >
+        <p
+          className="MuiTypography-root-35 MuiTypography-body1-37"
+        >
+          サンプル 太郎
+        </p>
+      </div>
+      <span
+        className="MuiButton-endIcon-27 MuiButton-iconSizeMedium-29"
+      >
+        <svg
+          aria-hidden={true}
+          className="MuiSvgIcon-root-65"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+          />
+        </svg>
+      </span>
+    </span>
+  </button>
+</div>
+`;
