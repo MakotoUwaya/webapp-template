@@ -6,12 +6,11 @@
 
 ### 初期セットアップ
 
-- Using [nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-- Add setting
-  - https://github.com/nvm-sh/nvm#deeper-shell-integration
+- Using [Volta](https://docs.volta.sh/guide/getting-started)
 
 ```sh
-nvm use
+node -v
+npm -v
 ```
 
 ```sh
