@@ -7,6 +7,7 @@ export default {
   exclude: ["**/node_modules/**/*", "**/src/setupTests.ts"],
   plugins: [
     "@snowpack/plugin-dotenv",
+    "@snowpack/plugin-typescript",
     "@snowpack/plugin-react-refresh",
     [
       "@snowpack/plugin-webpack",
