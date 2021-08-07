@@ -61,8 +61,8 @@ const Title = (): JSX.Element => {
                 fullWidth
                 size="large"
                 variant="contained"
-                // eslint-disable-next-line no-console
                 onClick={async () =>
+                  // eslint-disable-next-line no-console
                   console.log('TOKEN:', await getAccessTokenSilently())
                 }
               >
