@@ -19,6 +19,7 @@ describe('useUserInfo のテスト', () => {
   //     domainName: 'テストテストテスト仲介会社'
   //   });
   // });
+
   // test('setUserInfoを呼び出したあと、指定した値に変更されること', () => {
   //   const changedUserInfo: UserInfo = {
   //     userName: '変更後 太郎',
