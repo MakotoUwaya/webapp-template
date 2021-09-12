@@ -1,5 +1,5 @@
 import React, { lazy } from 'react';
-import { PartialRouteObject } from 'react-router';
+import { RouteObject } from 'react-router';
 import { Navigate } from 'react-router-dom';
 
 const ComponentsSample = lazy(() => import('./pages/ComponentsSample'));
@@ -8,7 +8,7 @@ const Main = lazy(() => import('./pages/Main'));
 const Notfound = lazy(() => import('./pages/Notfound'));
 const Title = lazy(() => import('./pages/Title'));
 
-const routes: PartialRouteObject[] = [
+const routes: RouteObject[] = [
   {
     path: '/',
     element: <Main />,
