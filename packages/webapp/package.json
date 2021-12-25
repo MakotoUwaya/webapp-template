@@ -41,7 +41,7 @@
     "@storybook/node-logger": "6.3.12",
     "@storybook/preset-create-react-app": "4.0.0",
     "@storybook/react": "6.3.12",
-    "@storybook/testing-react": "1.2.0",
+    "@storybook/testing-react": "1.2.2",
     "@testing-library/jest-dom": "5.16.1",
     "@testing-library/react": "12.1.2",
     "@testing-library/react-hooks": "7.0.2",
