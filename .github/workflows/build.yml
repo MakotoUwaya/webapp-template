@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: 14.x
       - name: generate .env files
-        run: echo -e ${{ secrets.SECRET_ENV }} > packages/webapp/.env
+        run: echo -e ${{ secrets.SECRET_ENV }} > packages/apps/.env
       - name: install
         uses: docker://oichan/firebase-emulator-docker:latest
         with:
