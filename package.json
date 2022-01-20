@@ -30,5 +30,9 @@
     "webapp:build": "lerna run --stream --scope react-tutorial-webapp build",
     "webapp:start": "lerna run --stream --scope react-tutorial-webapp start",
     "webapp:storybook": "lerna run --stream --scope react-tutorial-webapp storybook"
+  },
+  "volta": {
+    "node": "16.13.2",
+    "npm": "8.3.1"
   }
 }

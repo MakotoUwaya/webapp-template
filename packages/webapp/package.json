@@ -77,7 +77,6 @@
     "react-router-dom": "6.2.1"
   },
   "volta": {
-    "node": "16.13.2",
-    "npm": "8.3.1"
+    "extends": "../../package.json"
   }
 }
