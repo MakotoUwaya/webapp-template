@@ -43,12 +43,14 @@ const useLocalStyles = makeStyles(theme => ({
 const Main = (): JSX.Element => {
   const classNames = useLocalStyles();
   const { isAuthenticated, loginWithRedirect, logout, user } = useAuth0();
+  const onLogout = () =>
+    logout({ returnTo: import.meta.env.SNOWPACK_PUBLIC_MY_CALLBACK_URL });
 
   return (
     <div className={classNames.mainLayoutRoot}>
       {isAuthenticated ? (
         <>
-          <TopBar user={user} logOut={logout} />
+          <TopBar user={user} logOut={onLogout} />
           <div className={classNames.mainLayoutWrapper}>
             <div className={classNames.mainLayoutContainer}>
               <div className={classNames.mainLayoutContent}>
