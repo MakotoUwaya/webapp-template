@@ -2,7 +2,11 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:base"],
   "labels": ["dependencies", "renovate"],
-  "schedule": ["after 10pm and before 5am every weekday", "every weekend"],
+  "schedule": [
+    "after 10pm every weekday",
+    "every weekend",
+    "before 5am every weekday"
+  ],
   "dependencyDashboard": true,
   "rebaseWhen": "never",
   "timezone": "Asia/Tokyo",
@@ -11,7 +15,7 @@
   "packageRules": [
     {
       "groupName": "jest",
-      "sourceUrlPrefixes": [
+      "matchSourceUrlPrefixes": [
         "https://github.com/facebook/jest",
         "https://github.com/kulshekhar/ts-jest"
       ]
@@ -19,14 +23,16 @@
     {
       "groupName": "linters",
       "extends": ["packages:linters"],
-      "packageNames": ["prettier"],
-      "packagePatterns": ["^@typescript-eslint/"]
+      "matchPackageNames": ["prettier"],
+      "matchPackagePatterns": ["^@typescript-eslint/"]
     },
     {
-      "matchDepTypes": ["devDependencies"]
+      "matchDepTypes": ["devDependencies"],
+      "automergeComment": "Update devDependencies package."
     },
     {
-      "updateTypes": ["pin", "patch", "minor"]
+      "matchUpdateTypes": ["pin"],
+      "automergeComment": "Pin version."
     }
   ]
 }
