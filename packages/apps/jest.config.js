@@ -1,5 +1,6 @@
+const path = require('path');
+
 module.exports = {
-  ...require('@snowpack/app-scripts-react/jest.config.js')(),
   roots: ['<rootDir>'],
   collectCoverage: true,
   collectCoverageFrom: [
@@ -10,8 +11,20 @@ module.exports = {
     '!src/*.{js,jsx,ts,tsx}'
   ],
   coverageReporters: ['json', 'lcov', 'text-summary'],
-  setupFiles: ['react-app-polyfill/jsdom'],
+  setupFiles: [require.resolve('react-app-polyfill/jsdom')],
   setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
+  transform: {
+    '^.+\\.(js|jsx|ts|tsx)$': path.resolve(
+      __dirname,
+      '.jest/babelTransform.js'
+    ),
+    '^(?!.*\\.(js|jsx|ts|tsx|css|json)$)': path.resolve(
+      __dirname,
+      '.jest/fileTransform.js'
+    )
+  },
+  transformIgnorePatterns: ['node_modules'],
+  testEnvironment: 'jsdom',
   testMatch: [
     '<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}',
     '<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}',
