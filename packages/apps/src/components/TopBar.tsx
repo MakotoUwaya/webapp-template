@@ -3,7 +3,7 @@ import { AppBar, Box, Toolbar, Typography } from '@material-ui/core';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import AccountMenu from '../components/menus/AccountMenu';
+import AccountMenu from './menus/AccountMenu';
 
 type TopBarProps = {
   user?: User;

@@ -6,11 +6,12 @@ import React, {
   useState
 } from 'react';
 
-import { useDependency } from '../hooks/DependencyHook';
 import {
   UserInfo,
   UserChangedReason
 } from '../services/IAuthenticationService';
+
+import { useDependency } from './DependencyHook';
 
 type UserInfoInternal = {
   changeReason: UserChangedReason;

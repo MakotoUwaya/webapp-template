@@ -1,5 +1,5 @@
 {
-  "name": "react-tutorial-webapp",
+  "name": "react-tutorial-apps",
   "version": "0.0.3",
   "description": "tutorial",
   "scripts": {
@@ -77,7 +77,6 @@
     "react-router-dom": "6.2.1"
   },
   "volta": {
-    "node": "16.13.2",
-    "npm": "8.3.1"
+    "extends": "../../package.json"
   }
 }

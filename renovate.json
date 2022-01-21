@@ -7,14 +7,8 @@
   "rebaseWhen": "never",
   "timezone": "Asia/Tokyo",
   "separateMinorPatch": true,
+  "automerge": true,
   "packageRules": [
-    {
-      "packagePatterns": ["^@types/"],
-      "automerge": true,
-      "major": {
-        "automerge": false
-      }
-    },
     {
       "groupName": "jest",
       "sourceUrlPrefixes": [
@@ -29,12 +23,10 @@
       "packagePatterns": ["^@typescript-eslint/"]
     },
     {
-      "matchDepTypes": ["devDependencies"],
-      "automerge": true
+      "matchDepTypes": ["devDependencies"]
     },
     {
-      "updateTypes": ["pin", "patch", "minor"],
-      "automerge": true
+      "updateTypes": ["pin", "patch", "minor"]
     }
   ]
 }

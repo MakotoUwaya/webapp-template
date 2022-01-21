@@ -2,7 +2,7 @@
   "hosting": [
     {
       "target": "react",
-      "public": "packages/webapp/build",
+      "public": "packages/apps/build",
       "ignore": [
         "firebase.json",
         "**/.*",

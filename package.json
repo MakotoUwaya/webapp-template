@@ -25,10 +25,14 @@
     "lint:fix": "lerna run --stream lint:fix",
     "test": "lerna run --stream test",
     "test:updateSnapshot": "lerna run --stream test:updateSnapshot",
-    "webapp:test": "lerna run --stream --scope react-tutorial-webapp test",
+    "apps:test": "lerna run --stream --scope react-tutorial-apps test",
     "build": "lerna run --stream build",
-    "webapp:build": "lerna run --stream --scope react-tutorial-webapp build",
-    "webapp:start": "lerna run --stream --scope react-tutorial-webapp start",
-    "webapp:storybook": "lerna run --stream --scope react-tutorial-webapp storybook"
+    "apps:build": "lerna run --stream --scope react-tutorial-apps build",
+    "apps:start": "lerna run --stream --scope react-tutorial-apps start",
+    "apps:storybook": "lerna run --stream --scope react-tutorial-apps storybook"
+  },
+  "volta": {
+    "node": "16.13.2",
+    "npm": "8.3.1"
   }
 }
