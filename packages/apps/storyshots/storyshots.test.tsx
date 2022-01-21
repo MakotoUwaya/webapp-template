@@ -23,7 +23,7 @@ class CustomStories2SnapsConverter extends Stories2SnapsConverter {
     const { snapshotsDirName, snapshotExtension } = this.options;
 
     return path.format({
-      dir: path.join('..', 'src', dir, snapshotsDirName),
+      dir: path.join('..', dir, snapshotsDirName),
       name: uniqueName,
       ext: snapshotExtension
     });
