@@ -3,7 +3,7 @@
   "version": "0.0.3",
   "description": "tutorial",
   "scripts": {
-    "start": "snowpack dev",
+    "start": "snowpack dev --polyfill-node",
     "build": "snowpack build",
     "lint": "eslint --ext .ts,.tsx ./src",
     "lint:fix": "eslint --fix --ext .ts,.tsx . && prettier --write '**/*.{ts,tsx}'",
