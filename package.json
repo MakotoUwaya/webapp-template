@@ -29,7 +29,7 @@
     "apps:storybook": "lerna run --stream --scope react-tutorial-apps storybook"
   },
   "volta": {
-    "node": "16.13.2",
+    "node": "16.14.0",
     "npm": "8.4.1"
   }
 }
