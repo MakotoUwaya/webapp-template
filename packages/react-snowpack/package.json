@@ -1,7 +1,7 @@
 {
-  "name": "react-tutorial-apps",
+  "name": "react-snowpack-sample",
   "version": "0.0.3",
-  "description": "tutorial",
+  "description": "React snowpack sample",
   "scripts": {
     "start": "snowpack dev --polyfill-node",
     "build": "snowpack build",
