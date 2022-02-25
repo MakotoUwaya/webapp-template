@@ -15,7 +15,7 @@
     "prettier": "2.5.1"
   },
   "scripts": {
-    "bootstrap": "npm ci && lerna bootstrap",
+    "postinstall": "lerna bootstrap",
     "prepare": "git config --local core.hooksPath .githook || echo 'Can not set git hooks' ",
     "versionup": "lerna version --no-push --tag-version-prefix=''",
     "lint": "lerna run --stream lint",
