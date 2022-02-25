@@ -14,6 +14,7 @@
     "analyze": "ANALYZE=true yarn build",
     "serve": "vite preview",
     "test": "jest",
+    "test:updateSnapshot": "npm run test -- -u",
     "emulators:start": "firebase emulators:start --import=./firebase/firestore-data"
   },
   "dependencies": {
