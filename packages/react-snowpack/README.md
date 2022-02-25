@@ -11,7 +11,7 @@
 ### 初期セットアップ
 
 ```
-npm ci
+npm run bootstrap
 ```
 
 ### 定義済 npm スクリプトの説明

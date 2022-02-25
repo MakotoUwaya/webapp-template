@@ -17,14 +17,15 @@
     "turbo": "1.1.3"
   },
   "scripts": {
-    "postinstall": "lerna bootstrap",
+    "bootstrap": "npm ci && lerna bootstrap",
     "prepare": "git config --local core.hooksPath .githook || echo 'Can not set git hooks' ",
     "versionup": "lerna version --no-push --tag-version-prefix=''",
-    "lint": "lerna run --stream lint",
-    "lint:fix": "lerna run --stream lint:fix",
-    "test": "lerna run --stream test",
-    "test:updateSnapshot": "lerna run --stream test:updateSnapshot",
-    "build": "lerna run --stream build"
+    "check": "turbo run lint build test",
+    "lint": "turbo run lint",
+    "lint:fix": "turbo run lint:fix",
+    "test": "turbo run test",
+    "test:updateSnapshot": "turbo run test:updateSnapshot",
+    "build": "turbo run build"
   },
   "volta": {
     "node": "16.14.0",
