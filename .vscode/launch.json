@@ -2,11 +2,11 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "apps on chrome",
+      "name": "react-snowpack on chrome",
       "type": "chrome",
       "request": "launch",
       "url": "http://localhost:8080",
-      "webRoot": "${workspaceFolder}/packages/apps/src",
+      "webRoot": "${workspaceFolder}/packages/react-snowpack/src",
       "sourceMapPathOverrides": {
         "webpack:///src/*": "${webRoot}/*"
       }

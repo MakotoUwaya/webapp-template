@@ -11,7 +11,8 @@ export const UserChangedReason = {
   logOut: 'logOut',
   sessionExpired: 'sessionExpired'
 } as const;
-export type UserChangedReason = typeof UserChangedReason[keyof typeof UserChangedReason];
+export type UserChangedReason =
+  typeof UserChangedReason[keyof typeof UserChangedReason];
 
 export interface IAuthenticationService {
   logIn(): Promise<void>;
