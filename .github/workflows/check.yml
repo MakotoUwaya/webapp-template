@@ -1,16 +1,13 @@
 name: pull_request_check
-
 on:
   pull_request:
     branches:
       - main
       - dev
       - hotfix/**
-
 jobs:
-  build:
+  check:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js 16.x
@@ -20,20 +17,10 @@ jobs:
       - name: generate .env files
         run: echo -e ${{ secrets.SECRET_ENV }} > packages/react-snowpack/.env
       - name: install
-        run: npm ci
+        run: npm run bootstrap
         env:
           CI: true
-      - name: lint
-        run: npm run lint
-        env:
-          CI: true
-      - name: build
-        run: npm run build
-        env:
-          CI: true
-      - name: test
-        uses: docker://oichan/firebase-emulator-docker:latest
-        with:
-          args: npm run test
+      - name: check
+        run: npm run check
         env:
           CI: true
