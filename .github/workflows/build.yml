@@ -20,21 +20,15 @@ jobs:
       - name: generate .env files
         run: echo -e ${{ secrets.SECRET_ENV }} > packages/react-snowpack/.env
       - name: install
-        uses: docker://oichan/firebase-emulator-docker:latest
-        with:
-          args: npm ci
+        run: npm ci
         env:
           CI: true
       - name: lint
-        uses: docker://oichan/firebase-emulator-docker:latest
-        with:
-          args: npm run lint
+        run: npm run lint
         env:
           CI: true
       - name: build
-        uses: docker://oichan/firebase-emulator-docker:latest
-        with:
-          args: npm run build
+        run: npm run build
         env:
           CI: true
       - name: test
