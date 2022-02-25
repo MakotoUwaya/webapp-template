@@ -6,3 +6,8 @@ coverage
 node_modules
 
 storybook-static
+
+*.log
+dist
+.turbo
+.next
