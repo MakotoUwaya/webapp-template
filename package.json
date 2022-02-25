@@ -22,11 +22,7 @@
     "lint:fix": "lerna run --stream lint:fix",
     "test": "lerna run --stream test",
     "test:updateSnapshot": "lerna run --stream test:updateSnapshot",
-    "apps:test": "lerna run --stream --scope react-tutorial-apps test",
-    "build": "lerna run --stream build",
-    "apps:build": "lerna run --stream --scope react-tutorial-apps build",
-    "apps:start": "lerna run --stream --scope react-tutorial-apps start",
-    "apps:storybook": "lerna run --stream --scope react-tutorial-apps storybook"
+    "build": "lerna run --stream build"
   },
   "volta": {
     "node": "16.14.0",
