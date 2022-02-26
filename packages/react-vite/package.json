@@ -6,12 +6,12 @@
     "prepare": "git config --local core.hooksPath .githook || echo 'Can not set git hooks' ",
     "format": "prettier --write src",
     "lint": "eslint --ext .ts,.tsx src",
-    "lint:fix": "yarn lint --fix",
+    "lint:fix": "npm run lint --fix",
     "dev": "vite",
     "dev:emulator": "vite --mode emulator",
     "precommit": "lint-staged",
     "build": "tsc --noEmit && vite build",
-    "analyze": "ANALYZE=true yarn build",
+    "analyze": "ANALYZE=true npm run build",
     "serve": "vite preview",
     "test": "jest",
     "test:updateSnapshot": "npm run test -- -u",
@@ -73,7 +73,6 @@
     ]
   },
   "volta": {
-    "node": "16.14.0",
-    "yarn": "1.22.17"
+    "extends": "../../package.json"
   }
 }
