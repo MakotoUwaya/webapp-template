@@ -13,8 +13,8 @@ A Vite template for React, TypeScript and the latest major version of MUI.
 
 ## Getting Started
 
-- Install dependencies using `yarn`
-- Start the server with `yarn dev`
+- Install dependencies using `npm run bootstrap`
+- Start the server with `npm run dev`
 
 ## MUI
 
@@ -27,7 +27,7 @@ To learn more about the newest ways to use MUI, checkout [the docs](https://mui.
 - Dark mode toggle with React Context
 - Aliased imports with `@/` mapping to the `src/`
 - Rollup bundle analyzer
-  - To use, run `yarn analyze`
+  - To use, run `npm run analyze`
 
 ## Database
 
@@ -57,10 +57,10 @@ To learn more about the newest ways to use MUI, checkout [the docs](https://mui.
 
   ```sh
   # Start emulator(Other terminals)
-  yarn emulators:start
+  npm run emulators:start
 
   # serve apps with emulator mode
-  yarn dev:emulator
+  npm run dev:emulator
   ```
 
 ### Data structure

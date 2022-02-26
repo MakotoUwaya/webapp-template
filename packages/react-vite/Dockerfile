@@ -39,6 +39,6 @@ RUN apt -yqq update && apt -yqq install \
 
 COPY . .
 
-RUN yarn install --non-interactive --frozen-lockfile
+RUN npm install
 
 ENTRYPOINT [""]
