@@ -47,7 +47,7 @@
     "@testing-library/react-hooks": "7.0.2",
     "@types/jest": "27.4.1",
     "@types/react": "17.0.39",
-    "@types/react-dom": "17.0.11",
+    "@types/react-dom": "17.0.12",
     "@types/snowpack-env": "2.3.4",
     "@typescript-eslint/eslint-plugin": "5.13.0",
     "@typescript-eslint/parser": "5.13.0",
