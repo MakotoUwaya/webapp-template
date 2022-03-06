@@ -2,12 +2,12 @@
 .firebase
 .snowpack
 build
+dist
 coverage
 node_modules
 
 storybook-static
 
 *.log
-dist
 .turbo
 .next

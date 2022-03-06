@@ -3,16 +3,30 @@
   "baseBranch": "origin/main",
   "pipeline": {
     "build": {
-      "dependsOn": ["^build"],
-      "outputs": ["build/**", "lib/**"]
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "build/**",
+        "dist/**"
+      ]
     },
     "test": {
-      "dependsOn": ["^build"],
-      "outputs": ["coverage/**", "junit.xml"]
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "coverage/**",
+        "junit.xml"
+      ]
     },
     "test:updateSnapshot": {
-      "dependsOn": ["^build"],
-      "outputs": ["src/**/__snapshots__/**"]
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "src/**/__snapshots__/**"
+      ]
     },
     "lint": {
       "outputs": []
