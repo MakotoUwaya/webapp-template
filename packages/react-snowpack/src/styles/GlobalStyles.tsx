@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 import { createStyles, makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles(() =>
