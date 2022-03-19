@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "tutorial project",
   "private": true,
-  "packageManager": "npm@8.5.4",
+  "packageManager": "npm@8.5.5",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "5.15.0",
     "@typescript-eslint/parser": "5.15.0",
@@ -29,7 +29,7 @@
   },
   "volta": {
     "node": "16.14.2",
-    "npm": "8.5.4"
+    "npm": "8.5.5"
   },
   "workspaces": [
     "packages/*"
