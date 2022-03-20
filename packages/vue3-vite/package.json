@@ -2,36 +2,47 @@
   "name": "vue3-vite",
   "version": "0.0.0",
   "scripts": {
+    "serve": "vite preview",
+    "build": "vite build",
+    "test:unit": "vitest --environment jsdom",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview --port 5050",
     "test": "vitest --run --coverage --silent --environment jsdom",
-    "test:unit": "vitest --environment jsdom",
-    "typecheck": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
+    "typecheck": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false"
   },
   "dependencies": {
+    "@mdi/font": "5.9.55",
     "pinia": "2.0.12",
+    "roboto-fontface": "*",
     "vue": "3.2.31",
-    "vue-router": "4.0.14"
+    "vue-router": "4.0.14",
+    "vuetify": "^3.0.0-beta.0",
+    "webfontloader": "^1.0.0"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "1.1.1",
     "@types/jsdom": "16.2.14",
     "@types/node": "16.11.26",
+    "@types/webfontloader": "^1.0.0",
     "@vitejs/plugin-vue": "2.2.4",
     "@vitejs/plugin-vue-jsx": "1.3.8",
     "@vue/eslint-config-prettier": "7.0.0",
     "@vue/eslint-config-typescript": "10.0.0",
     "@vue/test-utils": "2.0.0-rc.18",
     "@vue/tsconfig": "0.1.3",
+    "@vuetify/vite-plugin": "^1.0.0-alpha.0",
     "eslint": "8.11.0",
     "eslint-plugin-vue": "8.5.0",
     "jsdom": "19.0.0",
     "prettier": "2.6.0",
+    "sass": "^1.38.0",
+    "sass-loader": "^10.0.0",
     "typescript": "4.6.2",
     "vite": "2.8.6",
     "vitest": "0.7.6",
-    "vue-tsc": "0.33.2"
+    "vue-cli-plugin-vuetify": "~2.4.8",
+    "vue-tsc": "0.33.2",
+    "vuetify-loader": "^2.0.0-alpha.0"
   }
 }
