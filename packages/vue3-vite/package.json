@@ -12,7 +12,7 @@
     "typecheck": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false"
   },
   "dependencies": {
-    "@mdi/font": "5.9.55",
+    "@mdi/font": "6.5.95",
     "pinia": "2.0.12",
     "roboto-fontface": "*",
     "vue": "3.2.31",
