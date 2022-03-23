@@ -52,7 +52,7 @@
     "@typescript-eslint/eslint-plugin": "5.16.0",
     "@typescript-eslint/parser": "5.16.0",
     "babel-jest": "27.5.1",
-    "babel-loader": "8.2.3",
+    "babel-loader": "8.2.4",
     "babel-preset-react-app": "10.0.1",
     "eslint-config-react-app": "7.0.0",
     "eslint-plugin-flowtype": "8.0.3",
