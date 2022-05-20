@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: "16"
 
-      - run: npm run bootstrap
+      - run: npm ci
       - run: echo -e ${{ secrets.FIREBASE_ENV_SETTINGS_BASE64 }} | base64 -d > ./packages/react-vite/.env
       - run: npm run build
       - run: cp ./packages/react-vite/dist/index.html ./packages/react-vite/dist/404.html

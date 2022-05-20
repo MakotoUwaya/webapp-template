@@ -39,6 +39,6 @@ RUN apt -yqq update && apt -yqq install \
 
 COPY . .
 
-RUN npm run bootstrap
+RUN npm ci
 
 ENTRYPOINT [""]
