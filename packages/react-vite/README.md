@@ -13,8 +13,8 @@ A Vite template for React, TypeScript and the latest major version of MUI.
 
 ## Getting Started
 
-- Install dependencies using `npm run bootstrap`
-- Start the server with `npm run dev`
+- Install dependencies using `npm ci`
+- Start the server with `npm run dev -w packages/react-vite`
 
 ## MUI
 

@@ -14,7 +14,7 @@ npm -v
 ```
 
 ```sh
-npm run bootstrap
+npm ci
 ```
 
 ### 定義済 npm スクリプトの説明
@@ -22,10 +22,9 @@ npm run bootstrap
 - npm スクリプトは `package.json` の `scripts` に定義する
   - `npm run` を実行すると設定されているスクリプトが一覧表示される
 
-| コマンド  | 用途                                                                                  |
-| :-------- | ------------------------------------------------------------------------------------- |
-| bootstrap | 全パッケージに必要なコンポーネントをインストール                                      |
-| prepare   | git hook の設定<br>https://docs.npmjs.com/cli/v7/using-npm/scripts#life-cycle-scripts |
-| lint      | 全パッケージのコード自動整形                                                          |
-| test      | 全パッケージのテスト実行                                                              |
-| build     | 全パッケージの成果物をビルドする                                                      |
+| コマンド | 用途                                                                                  |
+| :------- | ------------------------------------------------------------------------------------- |
+| prepare  | git hook の設定<br>https://docs.npmjs.com/cli/v7/using-npm/scripts#life-cycle-scripts |
+| lint     | 全パッケージのコード自動整形                                                          |
+| test     | 全パッケージのテスト実行                                                              |
+| build    | 全パッケージの成果物をビルドする                                                      |
