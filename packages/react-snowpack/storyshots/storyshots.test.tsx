@@ -6,7 +6,7 @@ import initStoryshots, {
 } from '@storybook/addon-storyshots';
 
 const replaceSimpleFileName = (text: string) =>
-  text.replace(/react-tutorial\//g, '');
+  text.replace(/webapp-template\//g, '');
 const replaceSpace = (text: string) => text.replace(/ /g, '_');
 
 /**

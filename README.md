@@ -1,8 +1,8 @@
-# react-tutorial
+# webapp-template
 
 ## 概要
 
-- React の学習用プロジェクト
+- Web アプリの学習用プロジェクト
 
 ### 初期セットアップ
 
