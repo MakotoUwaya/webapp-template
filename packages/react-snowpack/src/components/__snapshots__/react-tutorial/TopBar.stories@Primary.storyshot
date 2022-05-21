@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots react-tutorial/TopBar Primary 1`] = `
+<header
+  className="MuiPaper-root-11 MuiAppBar-root-0 MuiAppBar-positionFixed-1 MuiAppBar-colorPrimary-7 mui-fixed MuiPaper-elevation4-18"
+>
+  <div
+    className="MuiToolbar-root-39 MuiToolbar-regular-41 MuiToolbar-gutters-40"
+  >
+    <a
+      className="MuiTypography-root-43 MuiTypography-h3-50 MuiTypography-colorInherit-65"
+      href="/"
+      onClick={[Function]}
+    >
+      React Tutorial
+    </a>
+    <div
+      className="MuiBox-root-73 MuiBox-root-74"
+    />
+    <div
+      className="MuiBox-root-73 MuiBox-root-76"
+    >
+      <button
+        className="MuiButtonBase-root-106 MuiButton-root-77 MuiButton-text-79 MuiButton-disableElevation-88"
+        data-testid="accountMenu"
+        disabled={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex={0}
+        type="button"
+      >
+        <span
+          className="MuiButton-label-78"
+        >
+          <div
+            className="MuiAvatar-root-109 MuiAvatar-circular-112 MuiAvatar-colorDefault-110"
+          >
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root-117 MuiAvatar-fallback-116"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+              />
+            </svg>
+          </div>
+        </span>
+      </button>
+    </div>
+  </div>
+</header>
+`;

@@ -12,7 +12,7 @@ function pathResolve(dir: string) {
 const shouldAnalyze = process.env.ANALYZE;
 
 const config: UserConfig = {
-  base: '/react-tutorial/',
+  base: '/webapp-template/',
   server: {
     host: true
   },

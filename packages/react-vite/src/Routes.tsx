@@ -3,7 +3,7 @@ import { Navigate, RouteObject } from 'react-router-dom';
 import About from '@/about';
 import Information from '@/information';
 
-const baseUrl = 'react-tutorial';
+const baseUrl = 'webapp-template';
 
 const routes: RouteObject[] = [
   {
