@@ -2,11 +2,11 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "react-snowpack on chrome",
+      "name": "react-vite on chrome",
       "type": "chrome",
       "request": "launch",
-      "url": "http://localhost:8080",
-      "webRoot": "${workspaceFolder}/packages/react-snowpack/src",
+      "url": "http://localhost:3000/webapp-template/",
+      "webRoot": "${workspaceFolder}/packages/react-vite/src",
       "sourceMapPathOverrides": {
         "webpack:///src/*": "${webRoot}/*"
       }
