@@ -15,7 +15,9 @@
     "serve": "vite preview",
     "test": "jest",
     "test:updateSnapshot": "npm run test -- -u",
-    "emulators:start": "firebase emulators:start --import=./firebase/firestore-data"
+    "emulators:start": "firebase emulators:start --import=./firebase/firestore-data",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@emotion/react": "11.9.0",
@@ -29,6 +31,17 @@
     "react-router-dom": "6.3.0"
   },
   "devDependencies": {
+    "@mdx-js/preact": "2.1.1",
+    "@storybook/addon-a11y": "6.5.6",
+    "@storybook/addon-actions": "^6.5.6",
+    "@storybook/addon-essentials": "^6.5.6",
+    "@storybook/addon-interactions": "^6.5.6",
+    "@storybook/addon-links": "^6.5.6",
+    "@storybook/builder-vite": "^0.1.35",
+    "@storybook/node-logger": "^6.5.6",
+    "@storybook/preset-create-react-app": "^3.2.0",
+    "@storybook/react": "^6.5.6",
+    "@storybook/testing-library": "^0.0.11",
     "@testing-library/jest-dom": "5.16.4",
     "@testing-library/react": "12.1.5",
     "@testing-library/user-event": "14.2.0",
@@ -43,6 +56,7 @@
     "babel-loader": "8.2.5",
     "babel-plugin-named-asset-import": "0.3.8",
     "babel-preset-react-app": "10.0.1",
+    "esbuild-register": "3.3.2",
     "eslint": "8.17.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-config-react-app": "7.0.1",
@@ -59,6 +73,7 @@
     "rc": "1.2.8",
     "react-scripts": "5.0.1",
     "rollup-plugin-visualizer": "5.6.0",
+    "storybook-dark-mode": "1.1.0",
     "typescript": "4.7.3",
     "vite": "2.9.9",
     "vite-plugin-checker": "0.4.6"
@@ -74,5 +89,17 @@
   },
   "volta": {
     "extends": "../../package.json"
+  },
+  "eslintConfig": {
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
+    ]
   }
 }

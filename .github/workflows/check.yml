@@ -14,9 +14,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
-      - name: generate .env files
-        run: echo -e ${{ secrets.SECRET_ENV }} > packages/react-snowpack/.env
-      - name: install
+      - name: npm install
         run: npm ci
         env:
           CI: true

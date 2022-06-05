@@ -1,6 +1,5 @@
 *.env
 .firebase
-.snowpack
 build
 dist
 coverage
