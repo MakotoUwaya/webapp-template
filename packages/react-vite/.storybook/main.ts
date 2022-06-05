@@ -2,7 +2,7 @@ import type { StorybookViteConfig } from '@storybook/builder-vite';
 import { mergeConfig } from 'vite';
 
 const config: StorybookViteConfig = {
-  stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
+  stories: ['../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
     '@storybook/addon-a11y',
     '@storybook/addon-links',
@@ -17,11 +17,9 @@ const config: StorybookViteConfig = {
   features: {
     storyStoreV7: true
   },
-  viteFinal(config, options) {
+  async viteFinal(config, options) {
     return mergeConfig(config, {
-      // Use the same "resolve" configuration as your app
-      // resolve: (await import('../vite.config.ts')).default,
-      // Add dependencies to pre-optimization
+      resolve: (await import('../vite.config')).default,
       optimizeDeps: {
         include: ['storybook-dark-mode']
       }
