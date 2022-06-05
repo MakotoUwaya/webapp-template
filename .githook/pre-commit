@@ -1,3 +1,3 @@
 #!/bin/sh
 
-exec npm run precommit --workspaces
+exec npx lerna run --concurrency 1 --stream precommit --since HEAD --exclude-dependents
