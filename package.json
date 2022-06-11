@@ -22,7 +22,7 @@
     "lint:fix": "turbo run lint:fix",
     "test": "turbo run test",
     "test:updateSnapshot": "turbo run test:updateSnapshot",
-    "test:local": "lerna run test --since $(git show-branch | grep '*' | grep -v \"$(git rev-parse --abbrev-ref HEAD)\" | head -1 | awk -F'[]~^[]' '{print $2}')",
+    "test:local": "lerna run test --since main",
     "build": "turbo run build"
   },
   "volta": {
