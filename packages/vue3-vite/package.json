@@ -35,7 +35,7 @@
     "@vuetify/vite-plugin": "1.0.0-alpha.11",
     "eslint": "8.18.0",
     "eslint-plugin-vue": "8.7.1",
-    "jsdom": "19.0.0",
+    "jsdom": "20.0.0",
     "prettier": "2.7.1",
     "sass": "1.52.3",
     "sass-loader": "13.0.0",
