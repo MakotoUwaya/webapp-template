@@ -64,7 +64,7 @@
     "eslint-plugin-prettier": "4.2.1",
     "eslint-plugin-unused-imports": "2.0.0",
     "firebase": "9.8.4",
-    "firebase-tools": "11.2.0",
+    "firebase-tools": "11.2.1",
     "jest": "28.1.2",
     "jest-environment-jsdom": "28.1.2",
     "jest-resolve": "28.1.1",
