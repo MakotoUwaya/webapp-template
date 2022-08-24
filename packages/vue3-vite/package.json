@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@mdi/font": "7.0.96",
-    "pinia": "2.0.17",
+    "pinia": "2.0.20",
     "roboto-fontface": "*",
     "vue": "3.2.37",
     "vue-router": "4.1.3",
