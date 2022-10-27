@@ -25,7 +25,7 @@
     "@rushstack/eslint-patch": "1.1.4",
     "@types/jsdom": "20.0.0",
     "@types/node": "16.11.68",
-    "@types/webfontloader": "1.6.34",
+    "@types/webfontloader": "1.6.35",
     "@vitejs/plugin-vue": "3.0.3",
     "@vitejs/plugin-vue-jsx": "2.0.1",
     "@vitest/coverage-c8": "0.22.1",
