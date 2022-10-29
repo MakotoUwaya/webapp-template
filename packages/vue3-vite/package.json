@@ -26,7 +26,7 @@
     "@types/jsdom": "20.0.0",
     "@types/node": "16.18.2",
     "@types/webfontloader": "1.6.35",
-    "@vitejs/plugin-vue": "3.0.3",
+    "@vitejs/plugin-vue": "3.2.0",
     "@vitejs/plugin-vue-jsx": "2.0.1",
     "@vitest/coverage-c8": "0.22.1",
     "@vue/eslint-config-prettier": "7.0.0",
