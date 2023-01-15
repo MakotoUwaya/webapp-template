@@ -26,7 +26,7 @@
     "build": "turbo run build"
   },
   "volta": {
-    "node": "18.12.1",
+    "node": "18.13.0",
     "npm": "8.19.3"
   },
   "workspaces": [
