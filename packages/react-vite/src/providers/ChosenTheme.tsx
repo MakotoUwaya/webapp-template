@@ -1,11 +1,11 @@
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { FC, createContext, Dispatch, SetStateAction } from 'react';
+import { createContext, Dispatch, ReactNode, SetStateAction } from 'react';
 
 import { useLocalStorage } from '@/hooks/useLocalStorage';
 
 export const ChosenTheme = createContext<IChosenTheme>({} as IChosenTheme);
 
-export const ChosenThemeProvider: FC = ({ children }) => {
+export const ChosenThemeProvider = ({ children }: { children?: ReactNode }): JSX.Element => {
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
   const [theme, setTheme] = useLocalStorage<ThemeName>('theme', prefersDarkMode ? 'dark' : 'light', true);
 
