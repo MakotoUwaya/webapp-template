@@ -2,7 +2,7 @@ import { resolve } from 'path';
 
 import react from '@vitejs/plugin-react';
 import { visualizer } from 'rollup-plugin-visualizer';
-import { UserConfig } from 'vite';
+import type { PluginOption, UserConfig } from 'vite';
 import Checker from 'vite-plugin-checker';
 
 function pathResolve(dir: string) {
@@ -27,7 +27,8 @@ const config: UserConfig = {
   build: {
     assetsDir: './',
     rollupOptions: {
-      plugins: shouldAnalyze ? [visualizer({ open: true, filename: './bundle-size/bundle.html' })] : []
+      // FIXME: ad-hoc TypeAssertion https://github.com/vitejs/vite/issues/10081
+      plugins: shouldAnalyze ? [visualizer({ open: true, filename: './bundle-size/bundle.html' }) as PluginOption] : []
     },
     sourcemap: !!shouldAnalyze
   },
