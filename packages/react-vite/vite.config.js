@@ -19,7 +19,7 @@ const config = {
     alias: [
       {
         find: /@\//,
-        replacement: pathResolve('src') + '/'
+        replacement: `${pathResolve('src')}/`
       }
     ]
   },

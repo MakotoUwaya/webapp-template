@@ -6,6 +6,7 @@ import App from '@/App';
 import { ChosenThemeProvider, ThemeProvider } from '@/providers';
 
 const container = document.getElementById('root');
+// rome-ignore lint/style/noNonNullAssertion: <explanation>
 const root = createRoot(container!);
 root.render(
   <StrictMode>
