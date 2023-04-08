@@ -12,7 +12,7 @@
     "eslint-plugin-unused-imports": "2.0.0",
     "lerna": "6.4.1",
     "lint-staged": "13.1.4",
-    "prettier": "2.8.3",
+    "prettier": "2.8.7",
     "ts-node": "10.9.1",
     "turbo": "1.8.8"
   },
