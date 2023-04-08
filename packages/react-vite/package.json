@@ -16,8 +16,8 @@
     "test": "jest",
     "test:updateSnapshot": "npm run test -- -u",
     "emulators:start": "firebase emulators:start --import=./firebase/firestore-data",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@emotion/react": "11.10.6",
