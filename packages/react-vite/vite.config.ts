@@ -20,7 +20,7 @@ const config: UserConfig = {
     alias: [
       {
         find: /@\//,
-        replacement: pathResolve('src') + '/'
+        replacement: `${pathResolve('src')}/`
       }
     ]
   },

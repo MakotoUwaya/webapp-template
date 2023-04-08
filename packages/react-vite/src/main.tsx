@@ -1,11 +1,14 @@
 import { StrictMode } from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 
 import App from '@/App';
 import { ChosenThemeProvider, ThemeProvider } from '@/providers';
 
-ReactDOM.render(
+const container = document.getElementById('root');
+// rome-ignore lint/style/noNonNullAssertion: <explanation>
+const root = createRoot(container!);
+root.render(
   <StrictMode>
     <ChosenThemeProvider>
       <ThemeProvider>
@@ -14,6 +17,5 @@ ReactDOM.render(
         </BrowserRouter>
       </ThemeProvider>
     </ChosenThemeProvider>
-  </StrictMode>,
-  document.getElementById('root')
+  </StrictMode>
 );
