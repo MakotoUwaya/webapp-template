@@ -37,7 +37,7 @@
     "eslint-plugin-vue": "9.11.0",
     "jsdom": "21.1.1",
     "prettier": "2.8.8",
-    "sass": "1.62.0",
+    "sass": "1.62.1",
     "sass-loader": "13.2.2",
     "typescript": "5.0.4",
     "vite": "4.3.1",
