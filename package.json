@@ -13,7 +13,7 @@
     "lint-staged": "13.2.2",
     "prettier": "2.8.8",
     "ts-node": "10.9.1",
-    "turbo": "1.9.6"
+    "turbo": "1.9.8"
   },
   "scripts": {
     "prepare": "git config --local core.hooksPath .githook || echo 'Can not set git hooks' ",
