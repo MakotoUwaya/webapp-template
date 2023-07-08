@@ -1,10 +1,7 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const prettierrc = require('rc')('./prettier.config.js');
 module.exports = {
   extends: ['eslint:recommended', 'prettier', 'react-app', 'react-app/jest', 'plugin:storybook/recommended'],
   plugins: ['prettier', 'unused-imports'],
   rules: {
-    'prettier/prettier': ['error', prettierrc],
     'no-unused-vars': 'off',
     'unused-imports/no-unused-imports': 'error',
     'unused-imports/no-unused-vars': [
