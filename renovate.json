@@ -1,7 +1,12 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:base"],
-  "labels": ["dependencies", "renovate"],
+  "extends": [
+    "config:base"
+  ],
+  "labels": [
+    "dependencies",
+    "renovate"
+  ],
   "schedule": [
     "after 10pm every weekday",
     "every weekend",
@@ -11,8 +16,15 @@
   "rebaseWhen": "never",
   "timezone": "Asia/Tokyo",
   "separateMinorPatch": true,
-  "automerge": true,
   "packageRules": [
+    {
+      "description": "Automerge non-major updates",
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "automerge": true
+    },
     {
       "groupName": "jest",
       "matchSourceUrlPrefixes": [
@@ -22,16 +34,26 @@
     },
     {
       "groupName": "linters",
-      "extends": ["packages:linters"],
-      "matchPackageNames": ["prettier"],
-      "matchPackagePatterns": ["^@typescript-eslint/"]
+      "extends": [
+        "packages:linters"
+      ],
+      "matchPackageNames": [
+        "prettier"
+      ],
+      "matchPackagePatterns": [
+        "^@typescript-eslint/"
+      ]
     },
     {
-      "matchDepTypes": ["devDependencies"],
+      "matchDepTypes": [
+        "devDependencies"
+      ],
       "automergeComment": "Update devDependencies package."
     },
     {
-      "matchUpdateTypes": ["pin"],
+      "matchUpdateTypes": [
+        "pin"
+      ],
       "automergeComment": "Pin version."
     }
   ]
