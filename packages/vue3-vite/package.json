@@ -40,7 +40,7 @@
     "sass": "1.69.4",
     "sass-loader": "13.3.2",
     "typescript": "5.2.2",
-    "vite": "4.4.11",
+    "vite": "4.5.0",
     "vite-plugin-vuetify": "1.0.2",
     "vitest": "0.34.6",
     "vue-cli-plugin-vuetify": "2.5.8",
