@@ -65,7 +65,7 @@ const config: UserConfig = {
         lintCommand: 'eslint "./src/**/*.{ts,tsx}"'
       }
     })
-  ]
+  ] as PluginOption[]
 };
 
 const getConfig = () => config;
