@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 /** Next.js or SSR hook to be able to use the `window` object.
  * When this is running outside the browser, regular `window` will be undefined and cause runtime errors
@@ -7,7 +7,7 @@ export const useWindow = () => {
   const initialWindow = typeof window === 'undefined' ? ({} as Window) : window;
   const [localWindow, setLocalWindow] = useState<Window>(initialWindow);
   useEffect(() => {
-    // eslint-disable-next-line no-constant-condition
+    // biome-ignore lint/correctness/noConstantCondition: <explanation>
     if (typeof window) {
       setLocalWindow(window);
     }
