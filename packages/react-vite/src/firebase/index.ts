@@ -1,5 +1,5 @@
 import { getAnalytics } from 'firebase/analytics';
-import { initializeApp, FirebaseOptions } from 'firebase/app';
+import { FirebaseOptions, initializeApp } from 'firebase/app';
 import { connectFirestoreEmulator, getFirestore } from 'firebase/firestore';
 
 const firebaseConfig: FirebaseOptions = {
@@ -10,7 +10,7 @@ const firebaseConfig: FirebaseOptions = {
   storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
   messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
   appId: import.meta.env.VITE_APP_ID,
-  measurementId: import.meta.env.VITE_MEASUREMENT_ID
+  measurementId: import.meta.env.VITE_MEASUREMENT_ID,
 };
 
 const app = initializeApp(firebaseConfig);

@@ -3,25 +3,29 @@ import { mergeConfig } from 'vite';
 
 const config: StorybookConfig = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
-  addons: ['@storybook/addon-links', '@storybook/addon-essentials', '@storybook/addon-interactions'],
+  addons: [
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    '@storybook/addon-interactions',
+  ],
   framework: {
     name: '@storybook/react-vite',
-    options: {}
+    options: {},
   },
   docs: {
-    autodocs: 'tag'
+    autodocs: 'tag',
   },
   core: {
-    builder: '@storybook/builder-vite'
+    builder: '@storybook/builder-vite',
   },
   async viteFinal(config, options) {
     return mergeConfig(config, {
       // TODO: .ts ファイルを解釈できるようにする
       resolve: (await import('../vite.config.js')).default,
       optimizeDeps: {
-        include: ['storybook-dark-mode']
-      }
+        include: ['storybook-dark-mode'],
+      },
     });
-  }
+  },
 };
 export default config;

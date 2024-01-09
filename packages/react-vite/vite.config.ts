@@ -14,23 +14,30 @@ const shouldAnalyze = process.env.ANALYZE;
 const config: UserConfig = {
   base: '/webapp-template/',
   server: {
-    host: true
+    host: true,
   },
   resolve: {
     alias: [
       {
         find: /@\//,
-        replacement: `${pathResolve('src')}/`
-      }
-    ]
+        replacement: `${pathResolve('src')}/`,
+      },
+    ],
   },
   build: {
     assetsDir: './',
     rollupOptions: {
       // FIXME: ad-hoc TypeAssertion https://github.com/vitejs/vite/issues/10081
-      plugins: shouldAnalyze ? [visualizer({ open: true, filename: './bundle-size/bundle.html' }) as PluginOption] : []
+      plugins: shouldAnalyze
+        ? [
+            visualizer({
+              open: true,
+              filename: './bundle-size/bundle.html',
+            }) as PluginOption,
+          ]
+        : [],
     },
-    sourcemap: !!shouldAnalyze
+    sourcemap: !!shouldAnalyze,
   },
   plugins: [
     react({
@@ -43,29 +50,29 @@ const config: UserConfig = {
                 '@mui/material': {
                   styled: {
                     canonicalImport: ['@emotion/styled', 'default'],
-                    styledBaseImport: ['@mui/material', 'styled']
-                  }
+                    styledBaseImport: ['@mui/material', 'styled'],
+                  },
                 },
                 '@mui/material/styles': {
                   styled: {
                     canonicalImport: ['@emotion/styled', 'default'],
-                    styledBaseImport: ['@mui/material/styles', 'styled']
-                  }
-                }
-              }
-            }
-          ]
-        ]
-      }
+                    styledBaseImport: ['@mui/material/styles', 'styled'],
+                  },
+                },
+              },
+            },
+          ],
+        ],
+      },
     }),
     Checker({
       typescript: true,
       overlay: true,
       eslint: {
-        lintCommand: 'eslint "./src/**/*.{ts,tsx}"'
-      }
-    })
-  ] as PluginOption[]
+        lintCommand: 'eslint "./src/**/*.{ts,tsx}"',
+      },
+    }),
+  ] as PluginOption[],
 };
 
 const getConfig = () => config;
