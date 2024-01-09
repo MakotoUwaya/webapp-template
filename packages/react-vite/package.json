@@ -4,9 +4,9 @@
   "license": "MIT",
   "scripts": {
     "prepare": "git config --local core.hooksPath .githook || echo 'Can not set git hooks' ",
-    "format": "prettier --write src",
-    "lint": "eslint --ext .ts,.tsx src",
-    "lint:fix": "npm run lint --fix",
+    "format": "biome format ./src --write",
+    "lint": "biome lint ./src --files-ignore-unknown=true",
+    "lint:fix": "biome check --apply ./src --files-ignore-unknown=true",
     "dev": "vite",
     "dev:emulator": "vite --mode emulator",
     "precommit": "lint-staged",
