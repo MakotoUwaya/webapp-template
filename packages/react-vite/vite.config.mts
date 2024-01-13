@@ -68,9 +68,6 @@ const config: UserConfig = {
     Checker({
       typescript: true,
       overlay: true,
-      eslint: {
-        lintCommand: 'eslint "./src/**/*.{ts,tsx}"',
-      },
     }),
   ] as PluginOption[],
 };
