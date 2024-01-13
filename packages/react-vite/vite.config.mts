@@ -1,18 +1,17 @@
-import { resolve } from 'path';
+import { resolve } from "path";
 
-import react from '@vitejs/plugin-react';
-import { visualizer } from 'rollup-plugin-visualizer';
-import type { PluginOption, UserConfig } from 'vite';
-import Checker from 'vite-plugin-checker';
+import react from "@vitejs/plugin-react";
+import { visualizer } from "rollup-plugin-visualizer";
+import type { PluginOption, UserConfig } from "vite";
 
 function pathResolve(dir: string) {
-  return resolve(__dirname, '.', dir);
+  return resolve(__dirname, ".", dir);
 }
 
 const shouldAnalyze = process.env.ANALYZE;
 
 const config: UserConfig = {
-  base: '/webapp-template/',
+  base: "/webapp-template/",
   server: {
     host: true,
   },
@@ -20,19 +19,19 @@ const config: UserConfig = {
     alias: [
       {
         find: /@\//,
-        replacement: `${pathResolve('src')}/`,
+        replacement: `${pathResolve("src")}/`,
       },
     ],
   },
   build: {
-    assetsDir: './',
+    assetsDir: "./",
     rollupOptions: {
       // FIXME: ad-hoc TypeAssertion https://github.com/vitejs/vite/issues/10081
       plugins: shouldAnalyze
         ? [
             visualizer({
               open: true,
-              filename: './bundle-size/bundle.html',
+              filename: "./bundle-size/bundle.html",
             }) as PluginOption,
           ]
         : [],
@@ -44,19 +43,19 @@ const config: UserConfig = {
       babel: {
         plugins: [
           [
-            '@emotion',
+            "@emotion",
             {
               importMap: {
-                '@mui/material': {
+                "@mui/material": {
                   styled: {
-                    canonicalImport: ['@emotion/styled', 'default'],
-                    styledBaseImport: ['@mui/material', 'styled'],
+                    canonicalImport: ["@emotion/styled", "default"],
+                    styledBaseImport: ["@mui/material", "styled"],
                   },
                 },
-                '@mui/material/styles': {
+                "@mui/material/styles": {
                   styled: {
-                    canonicalImport: ['@emotion/styled', 'default'],
-                    styledBaseImport: ['@mui/material/styles', 'styled'],
+                    canonicalImport: ["@emotion/styled", "default"],
+                    styledBaseImport: ["@mui/material/styles", "styled"],
                   },
                 },
               },
@@ -64,10 +63,6 @@ const config: UserConfig = {
           ],
         ],
       },
-    }),
-    Checker({
-      typescript: true,
-      overlay: true,
     }),
   ] as PluginOption[],
 };
