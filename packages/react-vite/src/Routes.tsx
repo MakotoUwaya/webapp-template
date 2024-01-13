@@ -8,20 +8,20 @@ const baseUrl = 'webapp-template';
 const routes: RouteObject[] = [
   {
     path: `${baseUrl}/`,
-    element: <About />
+    element: <About />,
   },
   {
     path: `${baseUrl}/about`,
-    element: <About />
+    element: <About />,
   },
   {
     path: `${baseUrl}/information`,
-    element: <Information />
+    element: <Information />,
   },
   {
     path: '*',
-    element: <Navigate to={`${baseUrl}/`} />
-  }
+    element: <Navigate to={`${baseUrl}/`} />,
+  },
 ];
 
 export default routes;

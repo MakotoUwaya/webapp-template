@@ -1,6 +1,12 @@
 import { Button } from '@mui/material';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
-import { addDoc, collection, orderBy, query, updateDoc } from 'firebase/firestore';
+import {
+  addDoc,
+  collection,
+  orderBy,
+  query,
+  updateDoc,
+} from 'firebase/firestore';
 import { useCollection } from 'react-firebase-hooks/firestore';
 
 import { db } from '@/firebase';
@@ -11,8 +17,11 @@ type Info = {
   value: number;
 };
 
-const hasProperties = <K extends PropertyKey>(obj: unknown, ...props: Array<K>): obj is { [P in K]: unknown } => {
-  return obj instanceof Object && props.every(prop => prop in obj);
+const hasProperties = <K extends PropertyKey>(
+  obj: unknown,
+  ...props: Array<K>
+): obj is { [P in K]: unknown } => {
+  return obj instanceof Object && props.every((prop) => prop in obj);
 };
 
 const isInfo = (item: unknown): item is Info => {
@@ -23,7 +32,7 @@ const Information = (): JSX.Element => {
   const columns: GridColDef[] = [
     { field: 'id', headerName: 'id', width: 50 },
     { field: 'description', headerName: 'description', width: 250 },
-    { field: 'value', headerName: 'value', width: 100 }
+    { field: 'value', headerName: 'value', width: 100 },
   ];
   const ref = collection(db, 'information');
   const sortedQuery = query(ref, orderBy('id'));
@@ -32,7 +41,7 @@ const Information = (): JSX.Element => {
     addDoc(ref, {
       id: (value?.size || 0) + 1,
       description: '追加されたデータです',
-      value: 12345
+      value: 12345,
     });
   };
   const updateInfo = () => {
@@ -41,7 +50,7 @@ const Information = (): JSX.Element => {
     }
     const updateRef = value.docs[value.size - 1].ref;
     updateDoc(updateRef, {
-      description: '更新されたデータです'
+      description: '更新されたデータです',
     });
   };
 
@@ -59,7 +68,10 @@ const Information = (): JSX.Element => {
       <Button onClick={updateInfo}>Update Information</Button>
       {value && (
         <div style={{ height: 300, width: '100%' }}>
-          <DataGrid rows={value.docs.map(d => d.data()).filter(isInfo)} columns={columns} />
+          <DataGrid
+            rows={value.docs.map((d) => d.data()).filter(isInfo)}
+            columns={columns}
+          />
         </div>
       )}
     </div>

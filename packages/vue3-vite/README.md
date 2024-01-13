@@ -45,7 +45,7 @@ npm run build
 npm run test:unit
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+### Lint with [Biome](https://biomejs.dev/linter/)
 
 ```sh
 npm run lint
