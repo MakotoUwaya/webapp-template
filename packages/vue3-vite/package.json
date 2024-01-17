@@ -33,7 +33,7 @@
     "@vue/tsconfig": "0.5.1",
     "jsdom": "23.2.0",
     "sass": "1.69.7",
-    "sass-loader": "13.3.3",
+    "sass-loader": "14.0.0",
     "typescript": "5.3.3",
     "vite": "5.0.11",
     "vite-plugin-vuetify": "2.0.1",
