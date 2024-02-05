@@ -5,7 +5,7 @@
   "private": true,
   "devDependencies": {
     "@biomejs/biome": "1.5.3",
-    "lint-staged": "15.2.1",
+    "lint-staged": "15.2.2",
     "ts-node": "10.9.2",
     "turbo": "1.12.2"
   },
