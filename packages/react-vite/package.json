@@ -31,7 +31,7 @@
     "react-router-dom": "6.22.0"
   },
   "devDependencies": {
-    "@mdx-js/preact": "3.0.0",
+    "@mdx-js/preact": "3.0.1",
     "@storybook/addon-essentials": "7.6.14",
     "@storybook/addon-interactions": "^7.0.2",
     "@storybook/addon-links": "7.6.14",
