@@ -16,15 +16,8 @@
   "rebaseWhen": "never",
   "timezone": "Asia/Tokyo",
   "separateMinorPatch": true,
+  "automerge": true,
   "packageRules": [
-    {
-      "description": "Automerge non-major updates",
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
-      ],
-      "automerge": true
-    },
     {
       "groupName": "jest",
       "matchSourceUrlPrefixes": [
