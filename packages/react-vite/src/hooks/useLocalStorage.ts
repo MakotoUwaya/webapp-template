@@ -2,7 +2,7 @@
  * @source https://usehooks.com/useLocalStorage/
  */
 
-import { Dispatch, SetStateAction, useEffect, useState } from 'react';
+import { type Dispatch, type SetStateAction, useEffect, useState } from 'react';
 
 import { useWindow } from './useWindow';
 

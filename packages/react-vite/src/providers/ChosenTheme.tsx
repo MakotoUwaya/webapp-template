@@ -1,5 +1,10 @@
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { Dispatch, ReactNode, SetStateAction, createContext } from 'react';
+import {
+  type Dispatch,
+  type ReactNode,
+  type SetStateAction,
+  createContext,
+} from 'react';
 
 import { useLocalStorage } from '@/hooks/useLocalStorage';
 

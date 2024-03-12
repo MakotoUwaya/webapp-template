@@ -2,7 +2,7 @@ import isPropValid from '@emotion/is-prop-valid';
 import DarkModeIcon from '@mui/icons-material/Brightness3';
 import LightModeIcon from '@mui/icons-material/WbSunny';
 import { styled } from '@mui/material';
-import { FC, useContext } from 'react';
+import { type FC, useContext } from 'react';
 
 import { ChosenTheme } from '@/providers';
 
