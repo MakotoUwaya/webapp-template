@@ -3,7 +3,7 @@ import {
   ThemeProvider as MuiThemeProvider,
   createTheme,
 } from '@mui/material/styles';
-import { ReactNode, useContext, useMemo } from 'react';
+import { type ReactNode, useContext, useMemo } from 'react';
 
 import { ChosenTheme } from './ChosenTheme';
 

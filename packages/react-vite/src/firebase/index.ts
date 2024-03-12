@@ -1,5 +1,5 @@
 import { getAnalytics } from 'firebase/analytics';
-import { FirebaseOptions, initializeApp } from 'firebase/app';
+import { type FirebaseOptions, initializeApp } from 'firebase/app';
 import { connectFirestoreEmulator, getFirestore } from 'firebase/firestore';
 
 const firebaseConfig: FirebaseOptions = {
