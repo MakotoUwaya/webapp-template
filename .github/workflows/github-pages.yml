@@ -24,7 +24,7 @@ jobs:
       - run: cp ./packages/react-vite/dist/index.html ./packages/react-vite/dist/404.html
 
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         if: ${{ github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
