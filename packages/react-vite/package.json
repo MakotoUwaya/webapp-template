@@ -53,7 +53,7 @@
     "babel-plugin-named-asset-import": "0.3.8",
     "babel-preset-react-app": "10.0.1",
     "esbuild-register": "3.5.0",
-    "firebase": "10.10.0",
+    "firebase": "10.11.0",
     "jest": "29.7.0",
     "jest-environment-jsdom": "29.7.0",
     "jest-resolve": "29.7.0",
