@@ -27,7 +27,7 @@
     "@types/node": "20.13.0",
     "@types/webfontloader": "1.6.38",
     "@vitejs/plugin-vue": "5.0.5",
-    "@vitejs/plugin-vue-jsx": "3.1.0",
+    "@vitejs/plugin-vue-jsx": "4.0.0",
     "@vitest/coverage-v8": "1.6.0",
     "@vue/test-utils": "2.4.6",
     "@vue/tsconfig": "0.5.1",
