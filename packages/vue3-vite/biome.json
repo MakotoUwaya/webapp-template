@@ -13,7 +13,6 @@
       "jsxQuoteStyle": "single",
       "quoteStyle": "single",
       "semicolons": "always",
-      "trailingComma": "all",
       "quoteProperties": "asNeeded",
       "bracketSpacing": true,
       "bracketSameLine": false
