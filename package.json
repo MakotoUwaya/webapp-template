@@ -18,6 +18,7 @@
     "test:updateSnapshot": "turbo run test:updateSnapshot",
     "build": "turbo run build"
   },
+  "packageManager": "npm@10.8.2",
   "volta": {
     "node": "20.15.1",
     "npm": "10.8.2"
