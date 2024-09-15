@@ -4,7 +4,7 @@
   "description": "tutorial project",
   "private": true,
   "devDependencies": {
-    "@biomejs/biome": "1.9.0",
+    "@biomejs/biome": "1.9.1",
     "lint-staged": "15.2.10",
     "ts-node": "10.9.2",
     "turbo": "2.1.2"
