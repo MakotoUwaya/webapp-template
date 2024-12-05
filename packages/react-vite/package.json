@@ -65,7 +65,7 @@
     "storybook-dark-mode": "4.0.2",
     "ts-jest": "29.2.5",
     "typescript": "5.7.2",
-    "vite": "6.0.2"
+    "vite": "6.0.3"
   },
   "browserslist": {
     "production": [
