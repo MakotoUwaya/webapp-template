@@ -1,4 +1,5 @@
 import { Link, Slider } from '@mui/material';
+import type { JSX } from 'react';
 
 const About = (): JSX.Element => (
   <div>
