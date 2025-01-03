@@ -1,6 +1,6 @@
 import { AppBar, Toolbar, Typography } from '@mui/material';
 import { doc, getDoc } from 'firebase/firestore';
-import { useState } from 'react';
+import { type JSX, useState } from 'react';
 
 import DarkModeToggle from './DarkModeToggle';
 
