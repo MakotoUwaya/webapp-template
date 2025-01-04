@@ -1,6 +1,7 @@
 import useMediaQuery from '@mui/material/useMediaQuery';
 import {
   type Dispatch,
+  type JSX,
   type ReactNode,
   type SetStateAction,
   createContext,

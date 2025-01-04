@@ -7,6 +7,7 @@ import {
   query,
   updateDoc,
 } from 'firebase/firestore';
+import type { JSX } from 'react';
 import { useCollection } from 'react-firebase-hooks/firestore';
 
 import { db } from '@/firebase';
