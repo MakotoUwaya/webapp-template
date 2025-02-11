@@ -1,4 +1,5 @@
 import { styled } from '@mui/material';
+import type { JSX } from 'react';
 import { useRoutes } from 'react-router-dom';
 
 import routes from '@/Routes';
@@ -19,7 +20,7 @@ const Root = styled('div')`
 `;
 
 const App = (): JSX.Element => {
-  const routing = useRoutes(routes);
+  const routing: JSX.Element | null = useRoutes(routes);
   return (
     <Root>
       <Header />

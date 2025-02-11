@@ -3,13 +3,13 @@ import {
   ThemeProvider as MuiThemeProvider,
   createTheme,
 } from '@mui/material/styles';
-import { type ReactNode, useContext, useMemo } from 'react';
+import { type JSX, type ReactNode, useContext, useMemo } from 'react';
 
 import { ChosenTheme } from './ChosenTheme';
 
 export const ThemeProvider = ({
   children,
-}: { children?: ReactNode }): JSX.Element => {
+}: { children?: JSX.Element }): JSX.Element => {
   const { theme } = useContext(ChosenTheme);
   const muiTheme = useMemo(() => createThemeHelper(theme), [theme]);
 
