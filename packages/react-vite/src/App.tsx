@@ -20,7 +20,7 @@ const Root = styled('div')`
 `;
 
 const App = (): JSX.Element => {
-  const routing = useRoutes(routes);
+  const routing: JSX.Element | null = useRoutes(routes);
   return (
     <Root>
       <Header />

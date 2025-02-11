@@ -9,7 +9,7 @@ import { ChosenTheme } from './ChosenTheme';
 
 export const ThemeProvider = ({
   children,
-}: { children?: ReactNode }): JSX.Element => {
+}: { children?: JSX.Element }): JSX.Element => {
   const { theme } = useContext(ChosenTheme);
   const muiTheme = useMemo(() => createThemeHelper(theme), [theme]);
 
