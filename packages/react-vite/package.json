@@ -48,7 +48,7 @@
     "@types/react-dom": "19.0.4",
     "@vitejs/plugin-react": "4.3.4",
     "babel-jest": "29.7.0",
-    "babel-loader": "9.2.1",
+    "babel-loader": "10.0.0",
     "babel-plugin-named-asset-import": "0.3.8",
     "babel-preset-react-app": "10.1.0",
     "esbuild-register": "3.6.0",
