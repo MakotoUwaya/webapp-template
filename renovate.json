@@ -17,6 +17,10 @@
   "timezone": "Asia/Tokyo",
   "separateMinorPatch": true,
   "automerge": true,
+  "rangeStrategy": "pin",
+  "lockFileMaintenance": {
+    "enabled": false
+  },
   "packageRules": [
     {
       "groupName": "jest",
