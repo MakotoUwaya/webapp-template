@@ -63,7 +63,7 @@
     "storybook": "8.6.12",
     "storybook-dark-mode": "4.0.2",
     "ts-jest": "29.3.1",
-    "typescript": "5.8.2",
+    "typescript": "5.8.3",
     "vite": "6.2.5"
   },
   "browserslist": {
