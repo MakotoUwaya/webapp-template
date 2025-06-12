@@ -32,7 +32,7 @@
     "@vue/test-utils": "2.4.6",
     "@vue/tsconfig": "0.7.0",
     "jsdom": "26.1.0",
-    "sass": "1.89.1",
+    "sass": "1.89.2",
     "sass-loader": "16.0.5",
     "typescript": "5.8.3",
     "vite": "6.3.5",
