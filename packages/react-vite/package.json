@@ -56,7 +56,7 @@
     "jest": "30.0.2",
     "jest-environment-jsdom": "30.0.2",
     "jest-resolve": "30.0.2",
-    "jest-watch-typeahead": "2.2.2",
+    "jest-watch-typeahead": "3.0.1",
     "prop-types": "15.8.1",
     "rc": "1.2.8",
     "rollup-plugin-visualizer": "6.0.3",
