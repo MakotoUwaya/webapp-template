@@ -24,7 +24,7 @@
     "@emotion/styled": "11.14.1",
     "@mui/icons-material": "7.1.2",
     "@mui/material": "7.1.2",
-    "@mui/x-data-grid": "8.5.3",
+    "@mui/x-data-grid": "8.6.0",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-firebase-hooks": "5.1.1",
