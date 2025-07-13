@@ -1,11 +1,14 @@
-import { Parameters } from '@storybook/addons';
+import type { Preview } from '@storybook/react-vite';
 
-export const parameters: Parameters = {
-  actions: { argTypesRegex: '^on[A-Z].*' },
-  controls: {
-    matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/,
+export const parameters: Preview = {
+  parameters: {
+    actions: { argTypesRegex: '^on.*' },
+    controls: {
+      matchers: {
+        color: /(background|color)$/i,
+        date: /Date$/,
+      },
     },
   },
+  tags: ['autodocs'],
 };

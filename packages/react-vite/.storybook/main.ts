@@ -1,5 +1,4 @@
 import type { StorybookConfig } from '@storybook/react-vite';
-import { mergeConfig } from 'vite';
 
 const config: StorybookConfig = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
@@ -12,20 +11,12 @@ const config: StorybookConfig = {
     name: '@storybook/react-vite',
     options: {},
   },
-  docs: {
-    autodocs: 'tag',
-  },
   core: {
     builder: '@storybook/builder-vite',
   },
-  async viteFinal(config, options) {
-    return mergeConfig(config, {
-      // TODO: .ts ファイルを解釈できるようにする
-      resolve: (await import('../vite.config.js')).default,
-      optimizeDeps: {
-        include: ['storybook-dark-mode'],
-      },
-    });
+  async viteFinal(config, _options) {
+    const { mergeConfig } = await import('vite');
+    return mergeConfig(config, {});
   },
 };
 export default config;
