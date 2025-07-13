@@ -2,24 +2,25 @@ import isPropValid from '@emotion/is-prop-valid';
 import DarkModeIcon from '@mui/icons-material/Brightness3';
 import LightModeIcon from '@mui/icons-material/WbSunny';
 import { styled } from '@mui/material';
-import { type FC, useContext } from 'react';
+import { type FC, useContext, useId } from 'react';
 
 import { ChosenTheme } from '@/providers';
 
 const DarkModeToggle: FC = () => {
   const { theme, setTheme } = useContext(ChosenTheme);
+  const toggleId = useId();
   return (
     <Root>
       <Checkbox
         type='checkbox'
-        id='dark-mode-toggle'
+        id={toggleId}
         checked={theme === 'dark'}
         onChange={({ target: { checked } }) => {
           const themeToSet = checked ? 'dark' : 'light';
           setTheme(themeToSet);
         }}
       />
-      <Label htmlFor='dark-mode-toggle'>
+      <Label htmlFor={toggleId}>
         <MoonIcon>
           <DarkModeIcon color='inherit' fontSize='small' />
         </MoonIcon>
@@ -42,7 +43,7 @@ interface BallProps {
 }
 const Ball = styled('div', {
   shouldForwardProp: isPropValid,
-})<BallProps>`
+}) <BallProps>`
   background-color: #fff;
   border-radius: 50%;
   position: absolute;
