@@ -9,7 +9,7 @@ import { useWindow } from './useWindow';
 export const useLocalStorage = <T>(
   key: string,
   initialValue: T,
-  shouldLogErrors?: boolean,
+  shouldLogErrors?: boolean
 ): UseLocalStorage<T> => {
   const { localWindow } = useWindow();
   const isPrimitive = determineIsPrimitive(initialValue);
@@ -22,13 +22,13 @@ export const useLocalStorage = <T>(
     if (!prevStoredValue) return;
     try {
       setStoredValue(
-        isPrimitive ? prevStoredValue : JSON.parse(prevStoredValue),
+        isPrimitive ? prevStoredValue : JSON.parse(prevStoredValue)
       );
-    } catch (e) {
+    } catch (_e) {
       if (shouldLogErrors)
         console.error(
           '[useLocalStorageError] Failed to parse stored value. Attempted to parse:',
-          prevStoredValue,
+          prevStoredValue
         );
     }
   }, [localWindow, key, isPrimitive, shouldLogErrors]);
@@ -38,7 +38,7 @@ export const useLocalStorage = <T>(
       key,
       isPrimitive
         ? (storedValue as unknown as string)
-        : JSON.stringify(storedValue),
+        : JSON.stringify(storedValue)
     );
   }, [storedValue, isPrimitive, key, localWindow]);
 

@@ -7,7 +7,7 @@ export const useWindow = () => {
   const initialWindow = typeof window === 'undefined' ? ({} as Window) : window;
   const [localWindow, setLocalWindow] = useState<Window>(initialWindow);
   useEffect(() => {
-    // biome-ignore lint/correctness/noConstantCondition: <explanation>
+    // biome-ignore lint/correctness/noConstantCondition: window is defined in browser
     if (typeof window) {
       setLocalWindow(window);
     }

@@ -6,7 +6,7 @@ import App from '@/App';
 import { ChosenThemeProvider, ThemeProvider } from '@/providers';
 
 const container = document.getElementById('root');
-// biome-ignore lint/style/noNonNullAssertion: <explanation>
+// biome-ignore lint/style/noNonNullAssertion: root element is guaranteed to exist
 const root = createRoot(container!);
 root.render(
   <StrictMode>

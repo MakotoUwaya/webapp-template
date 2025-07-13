@@ -1,9 +1,9 @@
 import CssBaseline from '@mui/material/CssBaseline';
 import {
-  ThemeProvider as MuiThemeProvider,
   createTheme,
+  ThemeProvider as MuiThemeProvider,
 } from '@mui/material/styles';
-import { type JSX, type ReactNode, useContext, useMemo } from 'react';
+import { type JSX, useContext, useMemo } from 'react';
 
 import { ChosenTheme } from './ChosenTheme';
 
