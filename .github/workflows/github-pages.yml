@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "22.17.1"
+          node-version: "22.18.0"
 
       - run: npm ci
       - run: echo -e ${{ secrets.FIREBASE_ENV_SETTINGS_BASE64 }} | base64 -d > ./packages/react-vite/.env
