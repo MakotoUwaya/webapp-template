@@ -23,7 +23,7 @@
     "webfontloader": "1.6.28"
   },
   "devDependencies": {
-    "@types/jsdom": "21.1.7",
+    "@types/jsdom": "27.0.0",
     "@types/node": "22.18.8",
     "@types/webfontloader": "1.6.38",
     "@vitejs/plugin-vue": "6.0.1",
