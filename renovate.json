@@ -30,6 +30,20 @@
       ]
     },
     {
+      "description": "Group Storybook packages",
+      "groupName": "storybook",
+      "matchSourceUrlPrefixes": [
+        "storybook",
+        "@storybook/react",
+        "@storybook/react-vite",
+        "@storybook/addon-links",
+        "@storybook/builder-vite"
+      ],
+      "patch": {
+        "enabled": false
+      }
+    },
+    {
       "matchDepTypes": [
         "devDependencies"
       ],
