@@ -32,16 +32,10 @@
     {
       "description": "Group Storybook packages",
       "groupName": "storybook",
-      "matchSourceUrlPrefixes": [
+      "matchPackagePatterns": [
         "storybook",
-        "@storybook/react",
-        "@storybook/react-vite",
-        "@storybook/addon-links",
-        "@storybook/builder-vite"
-      ],
-      "patch": {
-        "enabled": false
-      }
+        "@storybook/.*"
+      ]
     },
     {
       "matchDepTypes": [
