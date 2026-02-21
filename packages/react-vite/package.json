@@ -57,7 +57,7 @@
     "jest-watch-typeahead": "3.0.1",
     "prop-types": "15.8.1",
     "rc": "1.2.8",
-    "rollup-plugin-visualizer": "6.0.5",
+    "rollup-plugin-visualizer": "7.0.0",
     "storybook": "10.2.10",
     "ts-jest": "29.4.6",
     "typescript": "5.9.3",
