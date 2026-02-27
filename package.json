@@ -18,10 +18,10 @@
     "test:updateSnapshot": "turbo run test:updateSnapshot",
     "build": "turbo run build"
   },
-  "packageManager": "npm@11.10.1",
+  "packageManager": "npm@11.11.0",
   "volta": {
     "node": "24.14.0",
-    "npm": "11.10.1"
+    "npm": "11.11.0"
   },
   "workspaces": [
     "packages/*"
