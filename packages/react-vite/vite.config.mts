@@ -1,6 +1,7 @@
 import { resolve } from "node:path";
 
 import react from "@vitejs/plugin-react";
+import babel from "@rolldown/plugin-babel";
 import { visualizer } from "rollup-plugin-visualizer";
 import type { PluginOption, UserConfig } from "vite";
 
@@ -39,30 +40,29 @@ const config: UserConfig = {
     sourcemap: !!shouldAnalyze,
   },
   plugins: [
-    react({
-      babel: {
-        plugins: [
-          [
-            "@emotion",
-            {
-              importMap: {
-                "@mui/material": {
-                  styled: {
-                    canonicalImport: ["@emotion/styled", "default"],
-                    styledBaseImport: ["@mui/material", "styled"],
-                  },
+    react(),
+    babel({
+      plugins: [
+        [
+          "@emotion",
+          {
+            importMap: {
+              "@mui/material": {
+                styled: {
+                  canonicalImport: ["@emotion/styled", "default"],
+                  styledBaseImport: ["@mui/material", "styled"],
                 },
-                "@mui/material/styles": {
-                  styled: {
-                    canonicalImport: ["@emotion/styled", "default"],
-                    styledBaseImport: ["@mui/material/styles", "styled"],
-                  },
+              },
+              "@mui/material/styles": {
+                styled: {
+                  canonicalImport: ["@emotion/styled", "default"],
+                  styledBaseImport: ["@mui/material/styles", "styled"],
                 },
               },
             },
-          ],
+          },
         ],
-      },
+      ],
     }),
   ] as PluginOption[],
 };
