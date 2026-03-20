@@ -31,7 +31,7 @@
     "@vitest/coverage-v8": "4.1.0",
     "@vue/test-utils": "2.4.6",
     "@vue/tsconfig": "0.9.0",
-    "jsdom": "29.0.0",
+    "jsdom": "29.0.1",
     "sass": "1.98.0",
     "sass-loader": "16.0.7",
     "typescript": "5.9.3",
