@@ -4,7 +4,14 @@ const config: Config.InitialOptions = {
   roots: ['<rootDir>/src'],
   collectCoverageFrom: ['src/**/*.{js,jsx,ts,tsx}', '!src/**/*.d.ts'],
   transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest',
+    '^.+\\.(ts|tsx)$': [
+      'ts-jest',
+      {
+        diagnostics: {
+          ignoreCodes: ['TS5101', 'TS5107'],
+        },
+      },
+    ],
   },
   setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
   testMatch: [
