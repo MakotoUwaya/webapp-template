@@ -60,7 +60,7 @@
     "rc": "1.2.8",
     "rollup-plugin-visualizer": "7.0.1",
     "storybook": "10.3.3",
-    "ts-jest": "29.4.6",
+    "ts-jest": "29.4.9",
     "typescript": "6.0.2",
     "vite": "8.0.3"
   },
