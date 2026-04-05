@@ -16,9 +16,12 @@ const config: UserConfig = {
     host: true,
   },
   resolve: {
-    alias: {
-      '@': pathResolve('src'),
-    },
+    alias: [
+      {
+        find: /^@\//,
+        replacement: `${pathResolve('src')}/`,
+      },
+    ],
   },
   build: {
     assetsDir: './',
