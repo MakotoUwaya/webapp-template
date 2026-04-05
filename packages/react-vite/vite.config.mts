@@ -1,7 +1,6 @@
 import { resolve } from 'node:path';
 
 import react from '@vitejs/plugin-react';
-import babel from '@rolldown/plugin-babel';
 import { visualizer } from 'rollup-plugin-visualizer';
 import type { UserConfig } from 'vite';
 
@@ -27,29 +26,6 @@ const config: UserConfig = {
   },
   plugins: [
     react(),
-    babel({
-      plugins: [
-        [
-          '@emotion',
-          {
-            importMap: {
-              '@mui/material': {
-                styled: {
-                  canonicalImport: ['@emotion/styled', 'default'],
-                  styledBaseImport: ['@mui/material', 'styled'],
-                },
-              },
-              '@mui/material/styles': {
-                styled: {
-                  canonicalImport: ['@emotion/styled', 'default'],
-                  styledBaseImport: ['@mui/material/styles', 'styled'],
-                },
-              },
-            },
-          },
-        ],
-      ],
-    }),
     shouldAnalyze &&
       visualizer({
         open: true,
