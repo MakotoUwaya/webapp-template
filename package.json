@@ -7,7 +7,7 @@
     "@biomejs/biome": "2.4.10",
     "lint-staged": "16.4.0",
     "ts-node": "10.9.2",
-    "turbo": "2.9.4"
+    "turbo": "2.9.5"
   },
   "scripts": {
     "prepare": "git config --local core.hooksPath .githook || echo 'Can not set git hooks' ",
