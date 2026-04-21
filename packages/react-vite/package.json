@@ -46,7 +46,7 @@
     "@types/react-dom": "19.2.3",
     "@vitejs/plugin-react": "6.0.1",
     "esbuild-register": "3.6.0",
-    "firebase": "12.12.0",
+    "firebase": "12.12.1",
     "jest": "30.3.0",
     "jest-environment-jsdom": "30.3.0",
     "jest-resolve": "30.3.0",
