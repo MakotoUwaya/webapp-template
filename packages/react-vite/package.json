@@ -4,7 +4,6 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "prepare": "git config --local core.hooksPath .githook || echo 'Can not set git hooks' ",
     "format": "biome format ./src --write",
     "lint": "biome lint ./src --files-ignore-unknown=true",
     "lint:fix": "biome check --apply ./src --files-ignore-unknown=true",
