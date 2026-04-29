@@ -11,3 +11,4 @@ storybook-static
 *.log
 .turbo
 .next
+.playwright-mcp
