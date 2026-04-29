@@ -26,5 +26,11 @@
   },
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "overrides": {
+    "protobufjs": "^7.5.5",
+    "test-exclude": "^7.0.2",
+    "shelljs": "^0.10.0",
+    "glob": "^13.0.0"
+  }
 }
