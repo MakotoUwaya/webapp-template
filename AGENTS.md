@@ -2,51 +2,61 @@
 
 ## プロジェクト概要
 
-npm workspaces + Turborepo によるモノレポ。2つのフロントエンドパッケージを含む。
+pnpm workspaces + Turborepo によるモノレポ。2つのフロントエンドパッケージを含む。
 
 - `packages/react-vite` — React 19 + Vite + MUI 7 + Firebase + Storybook + Jest
 - `packages/vue3-vite` — Vue 3 + Vite + Vuetify 3 + Pinia + Vitest
 
-Node.js 24.x / npm 11.x（Volta で管理）
+Node.js 24.x / pnpm 10.x（[mise](https://mise.jdx.dev/) で管理）
+
+初回セットアップ:
+
+```sh
+mise trust   # .mise.toml を信頼（リポジトリクローン直後に一度だけ）
+mise install # node / pnpm をインストール
+pnpm install # 依存解決
+```
 
 ## 開発コマンド
 
 ### ルート（全パッケージ一括）
 
 ```sh
-npm ci                        # 依存インストール（CI では --legacy-peer-deps を付与）
-npm run check                 # lint + build + test（pre-push フックと同じ）
-npm run lint                  # 全パッケージの lint
-npm run build                 # 全パッケージのビルド
-npm run test                  # 全パッケージのテスト
+pnpm install                  # 依存インストール（CI では --frozen-lockfile を付与）
+pnpm check                    # lint + build + test（pre-push フックと同じ）
+pnpm lint                     # 全パッケージの lint
+pnpm build                    # 全パッケージのビルド
+pnpm test                     # 全パッケージのテスト
 ```
 
-### react-vite
+### react-vite （ルート script `react` がエイリアス）
 
 ```sh
-npm run dev -w react-vite                                        # 開発サーバー
-npm run test -w react-vite                                       # Jest テスト（全件）
-npm run test -w react-vite -- --testPathPattern="Button"         # 単一テスト実行
-npm run storybook -w react-vite                                  # Storybook（port 6006）
-npm run dev:emulator -w react-vite                               # Firebase Emulator で開発
-npm run emulators:start -w react-vite                            # Firebase Emulator 起動
-npm run test:updateSnapshot -w react-vite                        # Jest スナップショット更新
+pnpm react dev                                          # 開発サーバー
+pnpm react test                                         # Jest テスト（全件）
+pnpm react test --testPathPattern="Button"              # 単一テスト実行
+pnpm react storybook                                    # Storybook（port 6006）
+pnpm react dev:emulator                                 # Firebase Emulator で開発
+pnpm react emulators:start                              # Firebase Emulator 起動
+pnpm react test:updateSnapshot                          # Jest スナップショット更新
 ```
 
-### vue3-vite
+### vue3-vite （ルート script `vue` がエイリアス）
 
 ```sh
-npm run dev -w vue3-vite                  # 開発サーバー
-npm run test -w vue3-vite                 # Vitest テスト（全件）
-npm run test -w vue3-vite -- Button       # 単一テスト実行（ファイル名フィルタ）
-npm run typecheck -w vue3-vite            # vue-tsc による型チェック（ビルドとは別）
+pnpm vue dev                              # 開発サーバー
+pnpm vue test                             # Vitest テスト（全件）
+pnpm vue test Button                      # 単一テスト実行（ファイル名フィルタ）
+pnpm vue typecheck                        # vue-tsc による型チェック（ビルドとは別）
 ```
+
+`pnpm react`/`pnpm vue` は `pnpm --filter <pkg>` のエイリアスなので、その後ろに任意の workspace script や引数を渡せる。
 
 ## アーキテクチャ
 
 ### Turbo パイプライン
 
-`turbo.json` でタスク依存を定義。`lint` は単独実行、`build` と `test` は `^build`（上流パッケージのビルド完了）に依存する。`npm run check` は `turbo run lint build test` を実行し、lint → build → test の順に処理される。
+`turbo.json` でタスク依存を定義。`lint` は単独実行、`build` と `test` は `^build`（上流パッケージのビルド完了）に依存する。`pnpm check` は `turbo run lint build test` を実行し、lint → build → test の順に処理される。
 
 ### react-vite のソース構成
 
@@ -80,7 +90,7 @@ src/
 └── styles/         # グローバルスタイル（SCSS）
 ```
 
-ビルド: `vite build` のみ（型チェックは `npm run typecheck` で別途実行）
+ビルド: `vite build` のみ（型チェックは `pnpm vue typecheck` で別途実行）
 
 tsconfig が複数に分割されている:
 - `tsconfig.app.json` — アプリ本体
@@ -99,7 +109,7 @@ tsconfig が複数に分割されている:
 - import の自動整理（`organizeImports: "on"`）
 - 有効なスタイルルール: `noUselessElse`、`noUnusedTemplateLiteral`、`useSelfClosingElements`、`useNumberNamespace`、`noInferrableTypes`、`noParameterAssign`
 
-自動修正: `npm run lint:fix -w react-vite` または `npm run lint:fix -w vue3-vite`
+自動修正: `pnpm react lint:fix` または `pnpm vue lint:fix`
 
 ### パスエイリアス
 
@@ -118,8 +128,14 @@ tsconfig が複数に分割されている:
 - テストファイル: `*.spec.ts`（`src/**/__tests__/` 以下）
 - `describe`、`it`、`expect` は `vitest` から明示的にインポート
 
+## 依存管理
+
+- `package.json` の `pnpm.overrides` で transitive dep の version を強制している（脆弱性対策・deprecation 警告対策）。各 override の解消条件は GitHub Issue #3368-3371 で管理
+- pnpm 10 のデフォルト挙動で運用（`.npmrc` 不要）。peer deps は `auto-install-peers=true` で自動補完される
+- pnpm の strict isolation でファントム依存（宣言なしの依存）が検出される。新しい package を import する際は `pnpm add` で正規に追加すること
+
 ## CI / 品質ゲート
 
-- **pre-push フック**（`.githook/pre-push`）: `npm run check` を実行
-- **GitHub Actions**（`check.yml`）: PR 作成時に `npm run check` を実行
+- **pre-push フック**（`.githook/pre-push`）: `pnpm check` を実行
+- **GitHub Actions**（`check.yml`）: PR 作成時に `pnpm check` を実行
 - lint・build・test がすべて通らないとプッシュ・マージ不可

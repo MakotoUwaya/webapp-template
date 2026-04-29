@@ -13,14 +13,16 @@ jobs:
     steps:
       - uses: actions/checkout@v6.0.2
 
+      - uses: pnpm/action-setup@v6
       - name: Setup Node
         uses: actions/setup-node@v6.4.0
         with:
           node-version: "24.15.0"
+          cache: "pnpm"
 
-      - run: npm ci --legacy-peer-deps
+      - run: pnpm install --frozen-lockfile
       - run: echo -e ${{ secrets.FIREBASE_ENV_SETTINGS_BASE64 }} | base64 -d > ./packages/react-vite/.env
-      - run: npm run build
+      - run: pnpm build
       - run: cp ./packages/react-vite/dist/index.html ./packages/react-vite/dist/404.html
 
       - name: Deploy

@@ -4,7 +4,7 @@
   "description": "tutorial project",
   "private": true,
   "devDependencies": {
-    "@biomejs/biome": "2.4.13",
+    "@biomejs/biome": "2.4.12",
     "lint-staged": "16.4.0",
     "ts-node": "10.9.2",
     "turbo": "2.9.6",
@@ -12,6 +12,8 @@
   },
   "scripts": {
     "prepare": "git config --local core.hooksPath .githook || echo 'Can not set git hooks' ",
+    "react": "pnpm --filter react-vite",
+    "vue": "pnpm --filter vue3-vite",
     "check": "turbo run lint build test",
     "lint": "turbo run lint",
     "lint:fix": "turbo run lint:fix",
@@ -19,18 +21,16 @@
     "test:updateSnapshot": "turbo run test:updateSnapshot",
     "build": "turbo run build"
   },
-  "packageManager": "npm@11.13.0",
-  "volta": {
-    "node": "24.15.0",
-    "npm": "11.13.0"
-  },
+  "packageManager": "pnpm@10.33.0",
   "workspaces": [
     "packages/*"
   ],
-  "overrides": {
-    "protobufjs": "^7.5.5",
-    "test-exclude": "^7.0.2",
-    "shelljs": "^0.10.0",
-    "glob": "^13.0.0"
+  "pnpm": {
+    "overrides": {
+      "protobufjs": "^7.5.5",
+      "test-exclude": "^7.0.2",
+      "shelljs": "^0.10.0",
+      "glob": "^13.0.0"
+    }
   }
 }

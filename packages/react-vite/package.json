@@ -11,20 +11,21 @@
     "dev": "vite",
     "dev:emulator": "vite --mode emulator",
     "build": "tsc --noEmit && vite build",
-    "analyze": "ANALYZE=true npm run build",
+    "analyze": "ANALYZE=true pnpm build",
     "serve": "vite preview",
     "test": "jest",
-    "test:updateSnapshot": "npm run test -- -u",
-    "emulators:start": "npx firebase emulators:start --import=./firebase/firestore-data",
+    "test:updateSnapshot": "pnpm test -- -u",
+    "emulators:start": "pnpm exec firebase emulators:start --import=./firebase/firestore-data",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@emotion/is-prop-valid": "1.4.0",
     "@emotion/react": "11.14.0",
     "@emotion/styled": "11.14.1",
     "@mui/icons-material": "9.0.0",
     "@mui/material": "9.0.0",
-    "@mui/x-data-grid": "9.0.4",
+    "@mui/x-data-grid": "9.0.2",
     "react": "19.2.5",
     "react-dom": "19.2.5",
     "react-firebase-hooks": "5.1.1",
@@ -57,7 +58,7 @@
     "storybook": "10.3.5",
     "ts-jest": "29.4.9",
     "typescript": "6.0.3",
-    "vite": "8.0.10"
+    "vite": "8.0.9"
   },
   "browserslist": {
     "production": [
@@ -67,8 +68,5 @@
     "development": [
       "last 1 chrome version"
     ]
-  },
-  "volta": {
-    "extends": "../../package.json"
   }
 }
