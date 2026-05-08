@@ -200,8 +200,8 @@ importers:
         specifier: 1.99.0
         version: 1.99.0
       sass-loader:
-        specifier: 16.0.7
-        version: 16.0.7(sass@1.99.0)(webpack@5.106.2(esbuild@0.27.7))
+        specifier: 16.0.8
+        version: 16.0.8(sass@1.99.0)(webpack@5.106.2(esbuild@0.27.7))
       typescript:
         specifier: 6.0.3
         version: 6.0.3
@@ -216,7 +216,7 @@ importers:
         version: 4.1.5(@types/node@24.12.3)(@vitest/coverage-v8@4.1.5)(jsdom@29.1.1)(vite@8.0.11(@types/node@24.12.3)(esbuild@0.27.7)(sass@1.99.0)(terser@5.46.1)(yaml@2.8.3))
       vue-cli-plugin-vuetify:
         specifier: 2.5.8
-        version: 2.5.8(sass-loader@16.0.7(sass@1.99.0)(webpack@5.106.2(esbuild@0.27.7)))(vue@3.5.34(typescript@6.0.3))(webpack@5.106.2(esbuild@0.27.7))
+        version: 2.5.8(sass-loader@16.0.8(sass@1.99.0)(webpack@5.106.2(esbuild@0.27.7)))(vue@3.5.34(typescript@6.0.3))(webpack@5.106.2(esbuild@0.27.7))
       vue-tsc:
         specifier: 3.2.8
         version: 3.2.8(typescript@6.0.3)
@@ -3750,8 +3750,8 @@ packages:
   safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
 
-  sass-loader@16.0.7:
-    resolution: {integrity: sha512-w6q+fRHourZ+e+xA1kcsF27iGM6jdB8teexYCfdUw0sYgcDNeZESnDNT9sUmmPm3ooziwUJXGwZJSTF3kOdBfA==}
+  sass-loader@16.0.8:
+    resolution: {integrity: sha512-hcov4ZwZJIGbEuyNr9EmiTmZueyrxSToE6GOzoZnq5JM7ecRO7ttyvilPn+VmRsqiP16+VYZzVnGZj/hzZgKBA==}
     engines: {node: '>= 18.12.0'}
     peerDependencies:
       '@rspack/core': 0.x || ^1.0.0 || ^2.0.0-0
@@ -8391,7 +8391,7 @@ snapshots:
 
   safer-buffer@2.1.2: {}
 
-  sass-loader@16.0.7(sass@1.99.0)(webpack@5.106.2(esbuild@0.27.7)):
+  sass-loader@16.0.8(sass@1.99.0)(webpack@5.106.2(esbuild@0.27.7)):
     dependencies:
       neo-async: 2.6.2
     optionalDependencies:
@@ -8866,7 +8866,7 @@ snapshots:
 
   vscode-uri@3.1.0: {}
 
-  vue-cli-plugin-vuetify@2.5.8(sass-loader@16.0.7(sass@1.99.0)(webpack@5.106.2(esbuild@0.27.7)))(vue@3.5.34(typescript@6.0.3))(webpack@5.106.2(esbuild@0.27.7)):
+  vue-cli-plugin-vuetify@2.5.8(sass-loader@16.0.8(sass@1.99.0)(webpack@5.106.2(esbuild@0.27.7)))(vue@3.5.34(typescript@6.0.3))(webpack@5.106.2(esbuild@0.27.7)):
     dependencies:
       null-loader: 4.0.1(webpack@5.106.2(esbuild@0.27.7))
       semver: 7.7.4
@@ -8874,7 +8874,7 @@ snapshots:
       vue: 3.5.34(typescript@6.0.3)
       webpack: 5.106.2(esbuild@0.27.7)
     optionalDependencies:
-      sass-loader: 16.0.7(sass@1.99.0)(webpack@5.106.2(esbuild@0.27.7))
+      sass-loader: 16.0.8(sass@1.99.0)(webpack@5.106.2(esbuild@0.27.7))
 
   vue-component-type-helpers@3.2.7: {}
 
