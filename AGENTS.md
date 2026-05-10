@@ -130,7 +130,7 @@ tsconfig が複数に分割されている:
 
 ## 依存管理
 
-- `package.json` の `pnpm.overrides` で transitive dep の version を強制している（脆弱性対策・deprecation 警告対策）。各 override の解消条件は GitHub Issue #3368-3371 で管理
+- `pnpm-workspace.yaml` の `overrides` で transitive dep の version を強制している（脆弱性対策・deprecation 警告対策）。各 override の解消条件は GitHub Issue #3368-3371 で管理。pnpm 11 から `package.json` の `pnpm` フィールドは読まれなくなったため、`overrides` / `allowBuilds` はすべて `pnpm-workspace.yaml` に集約する
 - pnpm 10 のデフォルト挙動で運用（`.npmrc` 不要）。peer deps は `auto-install-peers=true` で自動補完される
 - pnpm の strict isolation でファントム依存（宣言なしの依存）が検出される。新しい package を import する際は `pnpm add` で正規に追加すること
 
