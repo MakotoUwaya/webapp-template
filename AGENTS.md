@@ -7,7 +7,7 @@ pnpm workspaces + Turborepo によるモノレポ。2つのフロントエンド
 - `packages/react-vite` — React 19 + Vite + MUI 7 + Firebase + Storybook + Jest
 - `packages/vue3-vite` — Vue 3 + Vite + Vuetify 3 + Pinia + Vitest
 
-Node.js 24.x / pnpm 10.x（[mise](https://mise.jdx.dev/) で管理）
+Node.js 24.x / pnpm 11.x（[mise](https://mise.jdx.dev/) で管理）
 
 初回セットアップ:
 
@@ -131,11 +131,18 @@ tsconfig が複数に分割されている:
 ## 依存管理
 
 - `pnpm-workspace.yaml` の `overrides` で transitive dep の version を強制している（脆弱性対策・deprecation 警告対策）。各 override の解消条件は GitHub Issue #3368-3371 で管理。pnpm 11 から `package.json` の `pnpm` フィールドは読まれなくなったため、`overrides` / `allowBuilds` はすべて `pnpm-workspace.yaml` に集約する
-- pnpm 10 のデフォルト挙動で運用（`.npmrc` 不要）。peer deps は `auto-install-peers=true` で自動補完される
+- pnpm のデフォルト挙動で運用（`.npmrc` 不要）。peer deps は `autoInstallPeers: true` で自動補完される
 - pnpm の strict isolation でファントム依存（宣言なしの依存）が検出される。新しい package を import する際は `pnpm add` で正規に追加すること
+- Renovate（`renovate.json`）で依存更新を自動化:
+  - `automerge: true` / `rangeStrategy: pin` / `rebaseWhen: never`
+  - スケジュール: 平日 22:00 〜 翌 05:00 + 週末（Asia/Tokyo）
+  - グルーピング: `jest` 系（jest, ts-jest）と `storybook` 系
+  - 自動 rebase しないため、main を取り込みたい場合は手動で merge して push する
+- Storybook は 10 系。`@storybook/addon-essentials` と `@storybook/addon-interactions` は v10 でコアに統合され npm に存在しない。Renovate がこれらを触る場合は手動で除外する。`packages/react-vite/.storybook/main.ts` の `addons` 配列にも残してはいけない
 
 ## CI / 品質ゲート
 
 - **pre-push フック**（`.githook/pre-push`）: `pnpm check` を実行
-- **GitHub Actions**（`check.yml`）: PR 作成時に `pnpm check` を実行
+- **GitHub Actions**（`check.yml`）: `main` / `dev` / `hotfix/**` 宛の PR で `pnpm check` を実行
+- **GitHub Pages デプロイ**（`github-pages.yml`）: `main` への push で `packages/react-vite` をビルドし `peaceiris/actions-gh-pages` で公開。`secrets.FIREBASE_ENV_SETTINGS_BASE64` を `.env` に展開してビルドし、SPA 用に `index.html` を `404.html` にコピーする
 - lint・build・test がすべて通らないとプッシュ・マージ不可
