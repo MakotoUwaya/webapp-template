@@ -24,20 +24,5 @@
   "packageManager": "pnpm@11.0.9",
   "workspaces": [
     "packages/*"
-  ],
-  "pnpm": {
-    "overrides": {
-      "protobufjs": "8.2.0",
-      "test-exclude": "8.0.0",
-      "shelljs": "0.10.0",
-      "glob": "13.0.6"
-    },
-    "onlyBuiltDependencies": [
-      "@firebase/util",
-      "@parcel/watcher",
-      "esbuild",
-      "protobufjs",
-      "unrs-resolver"
-    ]
-  }
+  ]
 }
