@@ -27,7 +27,7 @@
   ],
   "pnpm": {
     "overrides": {
-      "protobufjs": "8.0.3",
+      "protobufjs": "8.2.0",
       "test-exclude": "8.0.0",
       "shelljs": "0.10.0",
       "glob": "13.0.6"
