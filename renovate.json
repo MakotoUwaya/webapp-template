@@ -18,6 +18,8 @@
   "separateMinorPatch": true,
   "automerge": true,
   "rangeStrategy": "pin",
+  "minimumReleaseAge": "7 days",
+  "internalChecksFilter": "strict",
   "lockFileMaintenance": {
     "enabled": false
   },
