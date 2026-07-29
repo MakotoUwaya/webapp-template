@@ -160,8 +160,8 @@ importers:
         specifier: 5.0.7
         version: 5.0.7(@vue/compiler-sfc@3.5.40)(pinia@3.0.4(typescript@6.0.3)(vue@3.5.40(typescript@6.0.3)))(vue@3.5.40(typescript@6.0.3))
       vuetify:
-        specifier: 4.0.7
-        version: 4.0.7(typescript@6.0.3)(vite-plugin-vuetify@2.1.3)(vue@3.5.40(typescript@6.0.3))
+        specifier: 4.0.9
+        version: 4.0.9(typescript@6.0.3)(vite-plugin-vuetify@2.1.3)(vue@3.5.40(typescript@6.0.3))
       webfontloader:
         specifier: 1.6.28
         version: 1.6.28
@@ -207,7 +207,7 @@ importers:
         version: 8.0.16(@types/node@24.12.4)(esbuild@0.27.7)(sass@1.99.0)(terser@5.46.1)(yaml@2.8.3)
       vite-plugin-vuetify:
         specifier: 2.1.3
-        version: 2.1.3(vite@8.0.16(@types/node@24.12.4)(esbuild@0.27.7)(sass@1.99.0)(terser@5.46.1)(yaml@2.8.3))(vue@3.5.40(typescript@6.0.3))(vuetify@4.0.7)
+        version: 2.1.3(vite@8.0.16(@types/node@24.12.4)(esbuild@0.27.7)(sass@1.99.0)(terser@5.46.1)(yaml@2.8.3))(vue@3.5.40(typescript@6.0.3))(vuetify@4.0.9)
       vitest:
         specifier: 4.1.10
         version: 4.1.10(@types/node@24.12.4)(@vitest/coverage-v8@4.1.10)(jsdom@29.1.1)(vite@8.0.16(@types/node@24.12.4)(esbuild@0.27.7)(sass@1.99.0)(terser@5.46.1)(yaml@2.8.3))
@@ -4684,8 +4684,8 @@ packages:
       typescript:
         optional: true
 
-  vuetify@4.0.7:
-    resolution: {integrity: sha512-SV+YJkBmudY3s9qfZO2ZGUsrD0TDQU8pMBH1ERga9AEyjGvioZuXXh93V9wHxXJphvqRC2NW10Nt2lW9IZQcPw==}
+  vuetify@4.0.9:
+    resolution: {integrity: sha512-ZLbvzqVjz3Gl8WEL8PTpaaLWCErseBUa/yjsgAbHWxlGcJCt0IucrbgOznRaeN3EVVYBLS2FIlTVqLayn9c9sg==}
     peerDependencies:
       typescript: '>=4.7'
       vite-plugin-vuetify: '>=2.1.0'
@@ -7169,11 +7169,11 @@ snapshots:
       typescript: 6.0.3
       vue: 3.5.40(typescript@6.0.3)
 
-  '@vuetify/loader-shared@2.1.2(vue@3.5.40(typescript@6.0.3))(vuetify@4.0.7)':
+  '@vuetify/loader-shared@2.1.2(vue@3.5.40(typescript@6.0.3))(vuetify@4.0.9)':
     dependencies:
       upath: 2.0.1
       vue: 3.5.40(typescript@6.0.3)
-      vuetify: 4.0.7(typescript@6.0.3)(vite-plugin-vuetify@2.1.3)(vue@3.5.40(typescript@6.0.3))
+      vuetify: 4.0.9(typescript@6.0.3)(vite-plugin-vuetify@2.1.3)(vue@3.5.40(typescript@6.0.3))
 
   '@webassemblyjs/ast@1.14.1':
     dependencies:
@@ -9516,14 +9516,14 @@ snapshots:
       '@types/istanbul-lib-coverage': 2.0.6
       convert-source-map: 2.0.0
 
-  vite-plugin-vuetify@2.1.3(vite@8.0.16(@types/node@24.12.4)(esbuild@0.27.7)(sass@1.99.0)(terser@5.46.1)(yaml@2.8.3))(vue@3.5.40(typescript@6.0.3))(vuetify@4.0.7):
+  vite-plugin-vuetify@2.1.3(vite@8.0.16(@types/node@24.12.4)(esbuild@0.27.7)(sass@1.99.0)(terser@5.46.1)(yaml@2.8.3))(vue@3.5.40(typescript@6.0.3))(vuetify@4.0.9):
     dependencies:
-      '@vuetify/loader-shared': 2.1.2(vue@3.5.40(typescript@6.0.3))(vuetify@4.0.7)
+      '@vuetify/loader-shared': 2.1.2(vue@3.5.40(typescript@6.0.3))(vuetify@4.0.9)
       debug: 4.4.3
       upath: 2.0.1
       vite: 8.0.16(@types/node@24.12.4)(esbuild@0.27.7)(sass@1.99.0)(terser@5.46.1)(yaml@2.8.3)
       vue: 3.5.40(typescript@6.0.3)
-      vuetify: 4.0.7(typescript@6.0.3)(vite-plugin-vuetify@2.1.3)(vue@3.5.40(typescript@6.0.3))
+      vuetify: 4.0.9(typescript@6.0.3)(vite-plugin-vuetify@2.1.3)(vue@3.5.40(typescript@6.0.3))
     transitivePeerDependencies:
       - supports-color
 
@@ -9625,12 +9625,12 @@ snapshots:
     optionalDependencies:
       typescript: 6.0.3
 
-  vuetify@4.0.7(typescript@6.0.3)(vite-plugin-vuetify@2.1.3)(vue@3.5.40(typescript@6.0.3)):
+  vuetify@4.0.9(typescript@6.0.3)(vite-plugin-vuetify@2.1.3)(vue@3.5.40(typescript@6.0.3)):
     dependencies:
       vue: 3.5.40(typescript@6.0.3)
     optionalDependencies:
       typescript: 6.0.3
-      vite-plugin-vuetify: 2.1.3(vite@8.0.16(@types/node@24.12.4)(esbuild@0.27.7)(sass@1.99.0)(terser@5.46.1)(yaml@2.8.3))(vue@3.5.40(typescript@6.0.3))(vuetify@4.0.7)
+      vite-plugin-vuetify: 2.1.3(vite@8.0.16(@types/node@24.12.4)(esbuild@0.27.7)(sass@1.99.0)(terser@5.46.1)(yaml@2.8.3))(vue@3.5.40(typescript@6.0.3))(vuetify@4.0.9)
 
   w3c-xmlserializer@5.0.0:
     dependencies:
