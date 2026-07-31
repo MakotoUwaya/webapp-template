@@ -5,7 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  protobufjs: 8.4.2
+  protobufjs: 8.7.1
   test-exclude: 8.0.0
   shelljs: 0.10.0
   glob: 13.0.6
@@ -3921,8 +3921,8 @@ packages:
   proto-list@1.2.4:
     resolution: {integrity: sha512-vtK/94akxsTMhe0/cbfpR+syPuszcuwhqVjJq26CuNDgFGj682oRBXOP5MJpv2r7JtE8MsiepGIqvvOTBwn2vA==}
 
-  protobufjs@8.4.2:
-    resolution: {integrity: sha512-64rfNzkWOZAIazXzpBFPWq6F9up6gMvTzjE2oWIzApx2N/dqVUEE7+bCn2+40780dFVtKOUab8QfxJ6KJDWbqA==}
+  protobufjs@8.7.1:
+    resolution: {integrity: sha512-agdGHrXNTv0IrYscJPDou/PlEJk1c/hBZ9o/B5NH2i/nSPtPqacNxzgwf1CebXxFMjMrZH5sqv9uQuw96aGt/A==}
     engines: {node: '>=12.0.0'}
 
   punycode@2.3.1:
@@ -5828,7 +5828,7 @@ snapshots:
     dependencies:
       lodash.camelcase: 4.3.0
       long: 5.3.2
-      protobufjs: 8.4.2
+      protobufjs: 8.7.1
       yargs: 17.7.2
 
   '@istanbuljs/load-nyc-config@1.1.0':
@@ -8937,7 +8937,7 @@ snapshots:
 
   proto-list@1.2.4: {}
 
-  protobufjs@8.4.2:
+  protobufjs@8.7.1:
     dependencies:
       long: 5.3.2
 
