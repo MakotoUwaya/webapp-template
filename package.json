@@ -6,7 +6,7 @@
   "devDependencies": {
     "@biomejs/biome": "2.4.16",
     "ts-node": "10.9.2",
-    "turbo": "2.9.18",
+    "turbo": "2.10.6",
     "typescript": "6.0.3"
   },
   "scripts": {
