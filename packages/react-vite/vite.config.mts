@@ -8,7 +8,7 @@ function pathResolve(dir: string) {
   return resolve(__dirname, '.', dir);
 }
 
-const shouldAnalyze = process.env.ANALYZE;
+const shouldAnalyze = !!process.env.ANALYZE;
 
 const config: UserConfig = {
   base: '/webapp-template/',
