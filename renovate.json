@@ -1,55 +1,82 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base"
+    "config:recommended"
   ],
   "labels": [
-    "dependencies",
     "renovate"
   ],
+  "dependencyDashboard": true,
   "schedule": [
     "after 10pm every weekday",
     "every weekend",
     "before 5am every weekday"
   ],
-  "dependencyDashboard": true,
-  "rebaseWhen": "never",
   "timezone": "Asia/Tokyo",
-  "separateMinorPatch": true,
-  "automerge": true,
-  "rangeStrategy": "pin",
-  "minimumReleaseAge": "7 days",
-  "internalChecksFilter": "strict",
-  "lockFileMaintenance": {
-    "enabled": false
-  },
   "packageRules": [
     {
-      "groupName": "jest",
-      "matchSourceUrlPrefixes": [
-        "https://github.com/facebook/jest",
-        "https://github.com/kulshekhar/ts-jest"
-      ]
+      "description": "Automerge minor updates",
+      "matchUpdateTypes": [
+        "minor"
+      ],
+      "automerge": true
     },
     {
       "description": "Group Storybook packages",
       "groupName": "storybook",
-      "matchPackagePatterns": [
+      "matchPackageNames": [
         "storybook",
-        "@storybook/.*"
+        "@storybook/react",
+        "@storybook/react-vite",
+        "@storybook/addon-links",
+        "@storybook/builder-vite",
+        "@storybook/addon-onboarding",
+        "@storybook/addon-vitest",
+        "msw-storybook-addon",
+        "@chromatic-com/storybook"
       ]
     },
     {
-      "matchDepTypes": [
-        "devDependencies"
-      ],
-      "automergeComment": "Update devDependencies package."
+      "description": "Group Jest packages",
+      "groupName": "jest",
+      "matchPackageNames": [
+        "jest",
+        "ts-jest",
+        "@types/jest",
+        "jest-environment-jsdom",
+        "jest-resolve",
+        "jest-watch-typeahead"
+      ]
     },
     {
-      "matchUpdateTypes": [
-        "pin"
-      ],
-      "automergeComment": "Pin version."
+      "description": "Group Playwright packages",
+      "groupName": "playwright",
+      "matchPackageNames": [
+        "mcr.microsoft.com/playwright",
+        "@playwright/test",
+        "playwright"
+      ]
+    },
+    {
+      "description": "Group Vitest packages (vitest core + @vitest/* must move together due to peer constraints)",
+      "groupName": "vitest",
+      "matchPackageNames": [
+        "vitest",
+        "@vitest/browser",
+        "@vitest/browser-playwright",
+        "@vitest/coverage-v8"
+      ]
+    },
+    {
+      "description": "Group pnpm updates across .mise.toml and package.json",
+      "groupName": "pnpm",
+      "matchPackageNames": [
+        "pnpm"
+      ]
     }
-  ]
+  ],
+  "patch": {
+    "enabled": false
+  },
+  "rangeStrategy": "pin"
 }
