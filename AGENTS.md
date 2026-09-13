@@ -134,11 +134,10 @@ tsconfig が複数に分割されている:
 - pnpm のデフォルト挙動で運用（`.npmrc` 不要）。peer deps は `autoInstallPeers: true` で自動補完される
 - pnpm の strict isolation でファントム依存（宣言なしの依存）が検出される。新しい package を import する際は `pnpm add` で正規に追加すること
 - Renovate（`renovate.json`）で依存更新を自動化:
-  - `automerge: true` / `rangeStrategy: pin` / `rebaseWhen: never`
+  - `rangeStrategy: pin` / minor updates のみ `automerge: true` / patch updates は無視（`patch.enabled: false`）
   - スケジュール: 平日 22:00 〜 翌 05:00 + 週末（Asia/Tokyo）
-  - グルーピング: `jest` 系（jest, ts-jest）と `storybook` 系
-  - 自動 rebase しないため、main を取り込みたい場合は手動で merge して push する
-- Storybook は 10 系。`@storybook/addon-essentials` と `@storybook/addon-interactions` は v10 でコアに統合され npm に存在しない。Renovate がこれらを触る場合は手動で除外する。`packages/react-vite/.storybook/main.ts` の `addons` 配列にも残してはいけない
+  - グルーピング: `storybook` 系、`jest` 系、`vitest` 系、`playwright` 系、`pnpm`（`.mise.toml` と `package.json`）
+  - Storybook は 10 系。`@storybook/addon-essentials` と `@storybook/addon-interactions` は v10 でコアに統合され npm に存在しないため、Renovate では `matchPackageNames` で明示的に指定している
 
 ## CI / 品質ゲート
 
