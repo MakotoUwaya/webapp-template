@@ -135,6 +135,7 @@ tsconfig が複数に分割されている:
 - pnpm の strict isolation でファントム依存（宣言なしの依存）が検出される。新しい package を import する際は `pnpm add` で正規に追加すること
 - Renovate（`renovate.json`）で依存更新を自動化:
   - `rangeStrategy: pin` / minor updates のみ `automerge: true` / patch updates は無視（`patch.enabled: false`）
+  - `minimumReleaseAge: "7 days"`: pnpm のサプライチェーン保護ポリシー（デフォルト24時間、ローカル環境の 10080分 = 7日間）による CI やローカルでの ERR_PNPM_MINIMUM_RELEASE_AGE_VIOLATION を防ぐため、公開から7日以上経過したパッケージのみを更新対象とする
   - スケジュール: 平日 22:00 〜 翌 05:00 + 週末（Asia/Tokyo）
   - グルーピング: `storybook` 系、`jest` 系、`vitest` 系、`playwright` 系、`pnpm`（`.mise.toml` と `package.json`）
   - Storybook は 10 系。`@storybook/addon-essentials` と `@storybook/addon-interactions` は v10 でコアに統合され npm に存在しないため、Renovate では `matchPackageNames` で明示的に指定している
