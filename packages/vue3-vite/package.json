@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@types/jsdom": "30.0.0",
-    "@types/node": "24.13.3",
+    "@types/node": "24.19.0",
     "@types/webfontloader": "1.6.38",
     "@vitejs/plugin-vue": "6.0.8",
     "@vitejs/plugin-vue-jsx": "5.1.6",
