@@ -4,7 +4,7 @@
   "description": "tutorial project",
   "private": true,
   "devDependencies": {
-    "@biomejs/biome": "2.5.12",
+    "@biomejs/biome": "2.6.2",
     "ts-node": "10.9.2",
     "turbo": "2.11.2",
     "typescript": "7.0.2"
