@@ -7,8 +7,8 @@ export const useWindow = () => {
   const initialWindow = typeof window === 'undefined' ? ({} as Window) : window;
   const [localWindow, setLocalWindow] = useState<Window>(initialWindow);
   useEffect(() => {
-    // biome-ignore lint/correctness/noConstantCondition: window is defined in browser
-    if (typeof window) {
+    if (typeof window !== 'undefined') {
+      // oxlint-disable-next-line react/set-state-in-effect -- SSR 対応のためマウント後に window を同期
       setLocalWindow(window);
     }
   }, []);

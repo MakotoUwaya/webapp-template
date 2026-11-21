@@ -2,8 +2,8 @@ import { styled } from '@mui/material';
 import type { JSX } from 'react';
 import { useRoutes } from 'react-router-dom';
 
-import routes from '@/Routes';
 import Header from '@/header';
+import routes from '@/Routes';
 
 const Root = styled('div')`
   padding: 1% 2% 10vh 2%;

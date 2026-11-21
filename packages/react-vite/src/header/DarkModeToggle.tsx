@@ -43,7 +43,7 @@ interface BallProps {
 }
 const Ball = styled('div', {
   shouldForwardProp: isPropValid,
-}) <BallProps>`
+})<BallProps>`
   background-color: #fff;
   border-radius: 50%;
   position: absolute;
