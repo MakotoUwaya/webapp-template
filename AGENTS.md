@@ -99,15 +99,15 @@ tsconfig が複数に分割されている:
 
 ## コーディング規約
 
-### Biome（ESLint / Prettier は不使用）
+### Oxlint + Oxfmt（ESLint / Prettier / Biome は不使用）
 
-両パッケージとも Biome でフォーマット・リントを統一。設定は各パッケージの `biome.json` に記載。
+両パッケージとも Oxlint（リント）と Oxfmt（フォーマット・import 整理）で統一。設定はルートの `.oxlintrc.json` / `.oxfmtrc.json` および各パッケージの `.oxlintrc.json` に記載。
 
 - 2スペースインデント、シングルクォート、セミコロンあり
-- JSX もシングルクォート（`jsxQuoteStyle: "single"`）
+- JSX もシングルクォート（`jsxSingleQuote: true`）
 - アロー関数の括弧は常に付与: `(x) => x`
-- import の自動整理（`organizeImports: "on"`）
-- 有効なスタイルルール: `noUselessElse`、`noUnusedTemplateLiteral`、`useSelfClosingElements`、`useNumberNamespace`、`noInferrableTypes`、`noParameterAssign`
+- import の自動整理（`sortImports: {}`）
+- 有効なスタイルルール: `no-else-return`、`no-param-reassign`、`default-param-last`、`typescript/prefer-as-const`、`typescript/prefer-enum-initializers`、`typescript/no-inferrable-types`、`unicorn/prefer-number-properties`、`react/self-closing-comp`（react-vite）
 
 自動修正: `pnpm react lint:fix` または `pnpm vue lint:fix`
 

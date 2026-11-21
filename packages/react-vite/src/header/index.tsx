@@ -2,9 +2,9 @@ import { AppBar, Toolbar, Typography } from '@mui/material';
 import { doc, getDoc } from 'firebase/firestore';
 import { type JSX, useState } from 'react';
 
-import DarkModeToggle from './DarkModeToggle';
-
 import { db } from '@/firebase';
+
+import DarkModeToggle from './DarkModeToggle';
 
 type AppInfo = {
   title: string;

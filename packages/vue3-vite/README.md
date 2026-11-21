@@ -45,7 +45,7 @@ npm run build
 npm run test:unit
 ```
 
-### Lint with [Biome](https://biomejs.dev/linter/)
+### Lint with [Oxlint](https://oxc.rs/docs/guide/usage/linter.html)
 
 ```sh
 npm run lint

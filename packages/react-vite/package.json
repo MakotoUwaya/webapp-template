@@ -4,9 +4,9 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "format": "biome format ./src --write",
-    "lint": "biome lint ./src --files-ignore-unknown=true",
-    "lint:fix": "biome check --apply ./src --files-ignore-unknown=true",
+    "format": "oxfmt ./src",
+    "lint": "oxlint ./src && oxfmt --check ./src",
+    "lint:fix": "oxlint --fix ./src && oxfmt ./src",
     "dev": "vite",
     "dev:emulator": "vite --mode emulator",
     "build": "tsc --noEmit && vite build",

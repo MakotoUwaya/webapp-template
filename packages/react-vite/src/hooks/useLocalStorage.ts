@@ -9,7 +9,7 @@ import { useWindow } from './useWindow';
 export const useLocalStorage = <T>(
   key: string,
   initialValue: T,
-  shouldLogErrors?: boolean
+  shouldLogErrors?: boolean,
 ): UseLocalStorage<T> => {
   const { localWindow } = useWindow();
   const isPrimitive = determineIsPrimitive(initialValue);
@@ -21,14 +21,15 @@ export const useLocalStorage = <T>(
     const prevStoredValue = localWindow?.localStorage?.getItem(key);
     if (!prevStoredValue) return;
     try {
+      // oxlint-disable-next-line react/set-state-in-effect -- localStorage からの初期値復元
       setStoredValue(
-        isPrimitive ? prevStoredValue : JSON.parse(prevStoredValue)
+        isPrimitive ? prevStoredValue : JSON.parse(prevStoredValue),
       );
-    } catch (_e) {
+    } catch {
       if (shouldLogErrors)
         console.error(
           '[useLocalStorageError] Failed to parse stored value. Attempted to parse:',
-          prevStoredValue
+          prevStoredValue,
         );
     }
   }, [localWindow, key, isPrimitive, shouldLogErrors]);
@@ -38,7 +39,7 @@ export const useLocalStorage = <T>(
       key,
       isPrimitive
         ? (storedValue as unknown as string)
-        : JSON.stringify(storedValue)
+        : JSON.stringify(storedValue),
     );
   }, [storedValue, isPrimitive, key, localWindow]);
 
