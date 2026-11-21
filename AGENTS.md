@@ -7,7 +7,7 @@ pnpm workspaces + Turborepo によるモノレポ。2つのフロントエンド
 - `packages/react-vite` — React 19 + Vite + MUI 7 + Firebase + Storybook + Jest
 - `packages/vue3-vite` — Vue 3 + Vite + Vuetify 3 + Pinia + Vitest
 
-Node.js 24.x / pnpm 11.x（[mise](https://mise.jdx.dev/) で管理）
+Node.js 26.x / pnpm 12.x（[mise](https://mise.jdx.dev/) で管理）
 
 初回セットアップ:
 
