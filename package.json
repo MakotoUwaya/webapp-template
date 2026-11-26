@@ -21,7 +21,7 @@
     "test:updateSnapshot": "turbo run test:updateSnapshot",
     "build": "turbo run build"
   },
-  "packageManager": "pnpm@12.21.0",
+  "packageManager": "pnpm@12.22.0",
   "workspaces": [
     "packages/*"
   ]
